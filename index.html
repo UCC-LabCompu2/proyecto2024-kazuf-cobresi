@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Cafe Cordoba</title>
 </head>
+<link rel="stylesheet" href="styles.css">
 <body>
 <header>
     <h1>
@@ -12,26 +14,29 @@
 </header>
 <main>
     <form id="Formulario_de_preferencias">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
         <p>
-            Ubicacion:<select>
-            <option>Nueva Cordoba</option>
-            <option>Güemes</option>
-            <option>General Paz</option>
+            <label for="Ubicacion">Ubicacion:</label>
+            <select id="Ubicacion">
+            <option value="Nva_Cba">Nueva Cordoba</option>
+            <option value="Guemes">Güemes</option>
+            <option value="Gral_paz">General Paz</option>
         </select>
         </p>
         <p>
-            Preferencias: Veterariano <input type="checkbox" name="Preferencias" value="Vegetariano">
-            Vegano <input type="checkbox" name="Preferencias" value="Vegano">
-            Sin tacc <input type="checkbox" name="Preferencias" value="Sin_tacc">
-            Sin preferencias <input type="checkbox" name="Preferencias" value="Sin_preferencias">
+            Preferencias: <label for="Vegetariano">Veterariano</label> <input type="checkbox" name="Preferencias" value="Vegetariano" id="Vegetariano">
+            <label for="Vegano">Vegano</label> <input type="checkbox" name="Preferencias" value="Vegano" id="Vegano">
+            <label for="Sin_tacc">Sin tacc</label> <input type="checkbox" name="Preferencias" value="Sin_tacc" id="Sin_tacc">
+            <label for="Sin_preferencias">Sin preferencias</label> <input type="checkbox" name="Preferencias" value="Sin_preferencias" id="Sin_preferencias">
         </p>
         <p>
-            Consumir: Salon <input type="radio" name="Consumir" value="Salon">
-            Take away <input type="radio" name="Consumir" value="Take_away">
+            Consumir: <label for="Salon">Salon</label><input type="radio" name="Consumir" value="Salon" id="Salon">
+            <label for="Take_away">Take away</label> <input type="radio" name="Consumir" value="Take_away" id="Take_away">
         </p>
         <p>
-            Pet Friendly: Si <input type="radio" name="Pets" value="Si">
-            No <input type="radio" name="Pets" value="No">
+            Pet Friendly: <label for="Si">Si</label> <input type="radio" name="Pets" value="Si" id="Si">
+            <label for="No">No</label> <input type="radio" name="Pets" value="No" id="No">
         </p>
         <p>
             <button type="Enviar">Enviar</button>

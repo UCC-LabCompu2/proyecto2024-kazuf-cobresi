@@ -1,11 +1,11 @@
 body {
-    font-family:Arial, sans-serif;
+    font-family:Roboto, sans-serif;
     background-color:#f4f4f4;
     margin: 0;
     padding: 0;
 }
 header {
-    background-color:#8b4513;
+    background-color: #684f3a;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
@@ -17,9 +17,51 @@ main {
 }
 
 #Formulario_de_preferencias {
-    background-color: #;
+    background-color: #ead0af;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
 
+#formulario_de_preferencias h2 {
+    color: #402a18;
+}
 
+#formulario_de_preferencias p {
+    margin: 10px 0;
+}
+#formulario_de_preferencias h2 {
+    margin-right: 10px;
+}
 
+#formulario_de_preferencias select,
+#formulario_de_preferencias input[type="checkbox"],
+#formulario_de_preferencias input[type="radio"] {
+    margin-right: 5px;
 
+}
+
+button {
+    background-color: #402a18;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a6906e;
+}
+
+footer {
+    background-color: #8b4513;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
