@@ -453,18 +453,22 @@ body{
     background-position: center;
     background-repeat: no-repeat;
 
-    margin: 0px;
-    display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    gap: 0px;
-    padding: 0px;
-    margin-top: 0px;
+
     justify-content: space-between;
     height: 100vh;
     text-align: center;
     color: #fff;
 
+    .Resultado2 {
 
+    display: grid;
+        text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+
+    padding: 20px;
+        padding-left: 185px;
+        padding-right: 170px;
     main {
 
         padding: 10px;
@@ -913,6 +917,7 @@ footer {
     background-color: rgba(0, 0, 0, 0.84);
     color: #cda677;
     text-align: center;
+}
 }
 }
 
