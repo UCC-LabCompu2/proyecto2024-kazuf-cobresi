@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright&family=Petit+Formal+Script&display=swap');
 
 .CAFE {
-    font-family: "Cantata One" , sans-serif;
-    background: url('images/bg.jpg');
+    background: url('images/Screen Shot 2024-05-21 at 14.03.43.png');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-blend-mode: overlay;
     margin: 0;
     padding: 0;
@@ -13,52 +14,181 @@
     justify-content: space-between;
     height: 100vh;
     text-align: center;
-}
-.header {
-    padding: 30px 0;
-    color: #cda677;
-    background-color: rgba(0, 0, 0, 0.84);
+body{
+
 }
 
-main {
+    main {
 
-    padding: 20px;
+        padding: 20px;
+    }
+
+    #Formulario_de_preferencias {
+        display: inline-block;
+        text-align: none;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .form-group input[type="checkbox"],
+    .form-group input[type="radio"] {
+        margin-right: 10px;
+    }
+
+    .boton {
+        font-family: "Times New Roman";
+        padding: 25px 70px;
+        border-radius: 50px;
+        cursor: pointer;
+        border: 0;
+        color: hsl(0, 0%, 0%);
+        background-color: white;
+        box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-size: 20px;
+        transition: all 0.5s ease;
+        margin-top: 523px;
+        display: inline-block;
+    }
+
+    .boton:hover {
+        letter-spacing: 3px;
+        background-color: hsl(25, 57%, 41%);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
+    }
+
+    .boton:active {
+        letter-spacing: 3px;
+        background-color: hsl(25, 58%, 22%);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+        transform: translateY(10px);
+        transition: 100ms;
+    }
+
+
+
+    footer {
+        padding: 10px 0;
+        background-color: rgba(0, 0, 0, 0.84);
+        color: #cda677;
+        text-align: center;
+    }
 }
 
-#Formulario_de_preferencias {
-    display: inline-block;
+
+
+
+
+
+
+.Ubicacion {
+    background: url('images/Screen Shot 2024-05-21 at 15.04.47.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    
+    height: 100vh;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.75);
-    padding: 20px;
-    border-radius: 10px;
-}
+    body{
 
-.form-group {
-    margin: 15px 0;
-}
+    }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
+    main {
 
-.form-group input[type="checkbox"],
-.form-group input[type="radio"] {
-    margin-right: 10px;
-}
+        padding: 20px;
+    }
 
-button {
-    background-color: #cda677;
-    color: rgba(0, 0, 0, 0.84);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
+    #Formulario_de_preferencias {
+        display: inline-block;
+        text-align: none;
+        padding: 20px;
+        border-radius: 10px;
+    }
 
-footer {
-    padding: 10px 0;
-    background-color: rgba(0, 0, 0, 0.84);
-    color: #cda677;
-    text-align: center;
+    .form-group input[type="checkbox"],
+    .form-group input[type="radio"] {
+        margin-right: 10px;
+    }
+
+    .card {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        perspective: 1000px;
+        box-shadow: 0 0 0 5px #ffffff80;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .card svg {
+        width: 48px;
+        fill: #333;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    }
+
+    .card__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #f2f2f2;
+        transform: rotateX(-90deg);
+        transform-origin: bottom;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .card:hover .card__content {
+        transform: rotateX(0deg);
+    }
+
+    .card__title {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+        font-weight: 700;
+    }
+
+    .card:hover svg {
+        scale: 0;
+    }
+
+    .card__description {
+        margin: 10px 0 0;
+        font-size: 14px;
+        color: #777;
+        line-height: 1.4;
+    }
+
+
+
+    footer {
+        padding: 10px 0;
+        background-color: rgba(0, 0, 0, 0.84);
+        color: #cda677;
+        text-align: center;
+    }
 }
