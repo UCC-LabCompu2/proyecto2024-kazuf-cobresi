@@ -1,15 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+
+body.cormorant-upright-regular {
+    font-family: "Cormorant Upright", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 body {
-    font-family:Roboto, sans-serif;
-    background-color:#f4f4f4;
+
+    font-family: "Cormorant Upright", cursive;
+    background: rgb(73,44,12);
+    background: linear-gradient(0deg, rgba(73,44,12,1) 0%, rgba(96,74,45,1) 8%, rgb(149, 115, 72) 19%, rgba(255,229,175,1) 56%);
     margin: 0;
     padding: 0;
 }
 header {
-    background-color: #684f3a;
+    background-color: #6a5441;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
 
+}
+
+header h1 {
+    font-family: 'Petit Formal Script', cursive;
 }
 
 main {
@@ -44,7 +59,7 @@ main {
 }
 
 button {
-    background-color: #402a18;
+    background-color: #493422;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
@@ -53,11 +68,11 @@ button {
 }
 
 button:hover {
-    background-color: #a6906e;
+    background-color: #775a37;
 }
 
 footer {
-    background-color: #8b4513;
+    background-color: #734624;
     color: #ffffff;
     text-align: center;
     padding: 10px 0;
