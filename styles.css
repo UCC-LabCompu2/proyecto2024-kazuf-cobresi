@@ -1,82 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
-
-body.cormorant-upright-regular {
-    font-family: "Cormorant Upright", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright&family=Petit+Formal+Script&display=swap');
 
 body {
-
     font-family: "Cormorant Upright", cursive;
-    background: rgb(73,44,12);
-    background: linear-gradient(0deg, rgba(73,44,12,1) 0%, rgba(96,74,45,1) 8%, rgb(149, 115, 72) 19%, rgba(255,229,175,1) 56%);
+    background: url('images/bg.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
     margin: 0;
     padding: 0;
-}
-header {
-    background-color: #6a5441;
-    color: #ffffff;
-    padding: 20px 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
     text-align: center;
-
 }
 
-header h1 {
-    font-family: 'Petit Formal Script', cursive;
+
+.header {
+    padding: 30px 0;
+    color: #cda677;
+    background-color: rgba(0, 0, 0, 0.84);
 }
 
 main {
+
     padding: 20px;
 }
 
 #Formulario_de_preferencias {
-    background-color: #ead0af;
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.75);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    max-width: 600px;
-    margin: 20px auto;
+    border-radius: 10px;
 }
 
-#formulario_de_preferencias h2 {
-    color: #402a18;
+.form-group {
+    margin: 15px 0;
 }
 
-#formulario_de_preferencias p {
-    margin: 10px 0;
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
 }
-#formulario_de_preferencias h2 {
+
+.form-group input[type="checkbox"],
+.form-group input[type="radio"] {
     margin-right: 10px;
 }
 
-#formulario_de_preferencias select,
-#formulario_de_preferencias input[type="checkbox"],
-#formulario_de_preferencias input[type="radio"] {
-    margin-right: 5px;
-
-}
-
 button {
-    background-color: #493422;
-    color: #ffffff;
+    background-color: #cda677;
+    color: rgba(0, 0, 0, 0.84);
     border: none;
     padding: 10px 20px;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #775a37;
-}
-
 footer {
-    background-color: #734624;
-    color: #ffffff;
-    text-align: center;
     padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.84);
+    color: #cda677;
+    text-align: center;
 }
