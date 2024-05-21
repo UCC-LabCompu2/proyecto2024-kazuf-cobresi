@@ -1,4 +1,4 @@
-/* -------------------------index3.html--------------------------------------------- */
+/* -------------------------Inicio--------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright&family=Petit+Formal+Script&display=swap');
 
 .CAFE {
@@ -26,7 +26,6 @@ body{
 
     #Formulario_de_preferencias {
         display: inline-block;
-        text-align: none;
         padding: 20px;
         border-radius: 10px;
     }
@@ -87,7 +86,7 @@ body{
 
 
 
-/* -------------------------index2.html--------------------------------------------- */
+/* -------------------------Ubicaciones--------------------------------------------- */
 
 .Ubicacion {
     background: url('images/Screen Shot 2024-05-21 at 15.04.47.png');
@@ -131,7 +130,7 @@ body{
         margin-top: 300px;
     }
 
-    /* -----------------------------card----------------------------------------- */
+    /* -----------------------------Card----------------------------------------- */
     .card {
         position: relative;
         width: 350px;
@@ -157,7 +156,7 @@ body{
 
     .card svg {
         width: 48px;
-        fill: #333;
+        fill: rgba(0, 0, 0, 0);
         transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
@@ -202,7 +201,7 @@ body{
         color: #777;
         line-height: 1.4;
     }
-    /* -------------------------card2--------------------------------------------- */
+    /* -------------------------Card2--------------------------------------------- */
     .card2 {
         position: relative;
         width: 350px;
@@ -228,7 +227,7 @@ body{
 
     .card2 svg {
         width: 48px;
-        fill: #333;
+        fill: rgba(51, 51, 51, 0);
         transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
@@ -273,7 +272,7 @@ body{
         color: #777;
         line-height: 1.4;
     }
-    /* -------------------------card3--------------------------------------------- */
+    /* -------------------------Card3--------------------------------------------- */
     .card3 {
         position: relative;
         width: 350px;
@@ -299,7 +298,7 @@ body{
 
     .card3 svg {
         width: 48px;
-        fill: #333;
+        fill: rgba(51, 51, 51, 0);
         transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
@@ -352,3 +351,574 @@ body{
         text-align: center;
     }
 }
+
+
+
+
+
+/* -------------------------Preferencias--------------------------------------------- */
+
+
+.Preferencia {
+    background: url('images/Screen Shot 2024-05-21 at 18.11.28.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    margin: 0;
+    font-size: 20px;
+    padding: 0;
+    margin-right: 600px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    text-align: center;
+    body{
+
+    }
+
+    main {
+
+        padding: 20px;
+    }
+
+    #Formulario_de_preferencias {
+        display: inline-block;
+
+        padding: 20px;
+        margin-top: 200px;
+        border-radius: 10px;
+    }
+
+    .form-group input[type="checkbox"],
+    .form-group input[type="radio"] {
+        margin-right: 10px;
+    }
+
+    .boton {
+        font-family: "Times New Roman";
+        padding: 25px 70px;
+        border-radius: 50px;
+        cursor: pointer;
+        border: 0;
+        color: hsl(0, 0%, 0%);
+        background-color: white;
+        box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-size: 20px;
+        transition: all 0.5s ease;
+        margin-top: 0px;
+        display: inline-block;
+
+        a:link , a:visited{
+            color: hsl(0, 0%, 0%);
+        }
+    }
+
+    .boton:hover {
+        letter-spacing: 3px;
+        background-color: hsl(25, 57%, 41%);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
+    }
+
+    .boton:active {
+        letter-spacing: 3px;
+        background-color: hsl(25, 58%, 22%);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+        transform: translateY(10px);
+        transition: 100ms;
+    }
+
+
+
+    footer {
+        padding: 10px 0;
+        background-color: rgba(0, 0, 0, 0.84);
+        color: #cda677;
+        text-align: center;
+    }
+}
+
+
+/* -------------------------Resultados--------------------------------------------- */
+
+.Resultado {
+    background: url('images/Screen Shot 2024-05-21 at 18.12.03.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 0px;
+    padding: 0px;
+    margin-top: 0px;
+    justify-content: space-between;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+
+
+    main {
+
+        padding: 10px;
+    }
+
+    .form-group input[type="checkbox"],
+    .form-group input[type="radio"] {
+        margin-right: 10px;
+    }
+
+    /* -----------------------------Card----------------------------------------- */
+    .card {
+        position: relative;
+        width: 200px;
+        height: 150px;
+        background-image: url('images/247f9ef8-508c-4641-b1ea-cff080cec288.jpg');
+        background-size: cover;
+        background-position: center;
+        font-size: 20px;
+        font-family: "Times New Roman";
+        margin-top: 0px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        perspective: 1000px;
+        box-shadow: 0 0 0 5px #ffffff80;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        a:link , a:visited{
+            color: hsl(0, 0%, 0%);
+        }
+    }
+
+
+    .card svg {
+        width: 48px;
+        fill: rgba(0, 0, 0, 0);
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    }
+
+    .card__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #f8dcc5;
+        transform: rotateX(-90deg);
+        transform-origin: bottom;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .card:hover .card__content {
+        transform: rotateX(0deg);
+    }
+
+    .card__title {
+        margin: 0;
+        font-size: 30px;
+        color: #333;
+        font-weight: 700;
+    }
+
+    .card:hover svg {
+        scale: 0;
+    }
+
+    .card__description {
+        margin: 10px 0 0;
+        font-size: 20px;
+        color: #777;
+        line-height: 1.4;
+    }
+    /* -------------------------Card2--------------------------------------------- */
+    .card2 {
+        position: relative;
+        width: 200px;
+        height: 150px;
+        background-image: url('images/images-1.jpg');
+        background-size: cover;
+        background-position: center;
+        font-size: 20px;
+        font-family: "Times New Roman";
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        perspective: 1000px;
+        box-shadow: 0 0 0 5px #ffffff80;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        a:link , a:visited{
+            color: hsl(0, 0%, 0%);
+        }
+    }
+
+
+    .card2 svg {
+        width: 48px;
+        fill: rgba(0, 0, 0, 0);
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+
+    .card2:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    }
+
+    .card2__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #f8dcc5;
+        transform: rotateX(-90deg);
+        transform-origin: bottom;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .card2:hover .card2__content {
+        transform: rotateX(0deg);
+    }
+
+    .card2__title {
+        margin: 0;
+        font-size: 30px;
+        color: #333;
+        font-weight: 700;
+    }
+
+    .card2:hover svg {
+        scale: 0;
+    }
+
+    .card2__description {
+        margin: 10px 0 0;
+        font-size: 20px;
+        color: #777;
+        line-height: 1.4;
+    }
+    /* -------------------------Card3--------------------------------------------- */
+    .card3 {
+        position: relative;
+        width: 200px;
+        height: 150px;
+        background-image: url('images/images.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        font-family: "Times New Roman";
+        display: flex;
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        perspective: 1000px;
+        box-shadow: 0 0 0 5px #ffffff80;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        a:link , a:visited{
+            color: hsl(0, 0%, 0%);
+        }
+    }
+
+
+    .card3 svg {
+        width: 48px;
+        fill: rgba(51, 51, 51, 0);
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+
+    .card3:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    }
+
+    .card3__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #f8dcc5;
+        transform: rotateX(-90deg);
+        transform-origin: bottom;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .card3:hover .card3__content {
+        transform: rotateX(0deg);
+    }
+
+    .card3__title {
+        margin: 0;
+        font-size: 30px;
+        color: #333;
+        font-weight: 700;
+    }
+
+    .card3:hover svg {
+        scale: 0;
+    }
+
+    .card3__description {
+        margin: 10px 0 0;
+        font-size: 20px;
+        color: #777;
+        line-height: 1.4;
+    }
+
+
+/* -------------------------Card4--------------------------------------------- */
+.card4 {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background-image: url('images/image212s.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    a:link , a:visited{
+        color: hsl(0, 0%, 0%);
+    }
+}
+
+
+.card4 svg {
+    width: 48px;
+    fill: rgba(51, 51, 51, 0);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.card4:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card4__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f8dcc5;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card4:hover .card4__content {
+    transform: rotateX(0deg);
+}
+
+.card4__title {
+    margin: 0;
+    font-size: 30px;
+    color: #333;
+    font-weight: 700;
+}
+
+.card4:hover svg {
+    scale: 0;
+}
+
+.card4__description {
+    margin: 10px 0 0;
+    font-size: 20px;
+    color: #777;
+    line-height: 1.4;
+}
+
+/* -------------------------Card5--------------------------------------------- */
+.card5 {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background-image: url('images/379f2ef7-173f-411b-a68c-ab2c4975a212.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    a:link , a:visited{
+        color: hsl(0, 0%, 0%);
+    }
+}
+
+
+.card5 svg {
+    width: 48px;
+    fill: rgba(51, 51, 51, 0);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.card5:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card5__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f8dcc5;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card5:hover .card5__content {
+    transform: rotateX(0deg);
+}
+
+.card5__title {
+    margin: 0;
+    font-size: 30px;
+    color: #333;
+    font-weight: 700;
+}
+
+.card5:hover svg {
+    scale: 0;
+}
+
+.card5__description {
+    margin: 10px 0 0;
+    font-size: 20px;
+    color: #777;
+    line-height: 1.4;
+}
+
+
+/* -------------------------Card6--------------------------------------------- */
+.card6 {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background-image: url('images/104d0131-fee8-4b85-a0e8-e4f41b5f3f4b.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    a:link , a:visited{
+        color: hsl(0, 0%, 0%);
+    }
+}
+
+
+.card6 svg {
+    width: 48px;
+    fill: rgba(51, 51, 51, 0);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.card6:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card6__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f8dcc5;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card6:hover .card6__content {
+    transform: rotateX(0deg);
+}
+
+.card6__title {
+    margin: 0;
+    font-size: 30px;
+    color: #333;
+    font-weight: 700;
+}
+
+.card6:hover svg {
+    scale: 0;
+}
+
+.card6__description {
+    margin: 10px 0 0;
+    font-size: 20px;
+    color: #777;
+    line-height: 1.4;
+}
+
+footer {
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.84);
+    color: #cda677;
+    text-align: center;
+}
+}
+
+
+
+
+
+
+
