@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright&family=Petit+Formal+Script&display=swap');
 
-body {
-    font-family: "Cormorant Upright", cursive;
+.CAFE {
+    font-family: "Cantata One" , sans-serif;
     background: url('images/bg.jpg');
     background-size: cover;
     background-blend-mode: overlay;
@@ -14,8 +14,6 @@ body {
     height: 100vh;
     text-align: center;
 }
-
-
 .header {
     padding: 30px 0;
     color: #cda677;

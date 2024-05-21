@@ -2,17 +2,13 @@
 
 <html lang="es">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cantata+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <title>Cafe Cordoba</title>
 </head>
-<link rel="stylesheet" href="styles.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright&family=Petit+Formal+Script&display=swap" rel="stylesheet">
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright&family=Petit+Formal+Script&display=swap');
-</style>
 
 <header class="header">
     <h1 id="Titulo_principal">
@@ -20,27 +16,32 @@
     </h1>
 </header>
 
-<body>
+<body class="CAFE">
 <main>
     <form id="Formulario_de_preferencias">
 
         <p>
             <label for="Ubicacion">Ubicacion:</label>
             <select id="Ubicacion">
-            <option value="Nva_Cba">Nueva Cordoba</option>
-            <option value="Guemes">Güemes</option>
-            <option value="Gral_paz">General Paz</option>
-        </select>
+                <option value="Nva_Cba">Nueva Cordoba</option>
+                <option value="Guemes">Güemes</option>
+                <option value="Gral_paz">General Paz</option>
+            </select>
         </p>
         <p>
-            Preferencias: <label for="Vegetariano">Veterariano</label> <input type="checkbox" name="Preferencias" value="Vegetariano" id="Vegetariano">
+            Preferencias: <label for="Vegetariano">Vegetariano</label> <input type="checkbox" name="Preferencias"
+                                                                              value="Vegetariano" id="Vegetariano">
             <label for="Vegano">Vegano</label> <input type="checkbox" name="Preferencias" value="Vegano" id="Vegano">
-            <label for="Sin_tacc">Sin tacc</label> <input type="checkbox" name="Preferencias" value="Sin_tacc" id="Sin_tacc">
-            <label for="Sin_preferencias">Sin preferencias</label> <input type="checkbox" name="Preferencias" value="Sin_preferencias" id="Sin_preferencias">
+            <label for="Sin_tacc">Sin tacc</label> <input type="checkbox" name="Preferencias" value="Sin_tacc"
+                                                          id="Sin_tacc">
+            <label for="Sin_preferencias">Sin preferencias</label> <input type="checkbox" name="Preferencias"
+                                                                          value="Sin_preferencias"
+                                                                          id="Sin_preferencias">
         </p>
         <p>
             Consumir: <label for="Salon">Salon</label><input type="radio" name="Consumir" value="Salon" id="Salon">
-            <label for="Take_away">Take away</label> <input type="radio" name="Consumir" value="Take_away" id="Take_away">
+            <label for="Take_away">Take away</label> <input type="radio" name="Consumir" value="Take_away"
+                                                            id="Take_away">
         </p>
         <p>
             Pet Friendly: <label for="Si">Si</label> <input type="radio" name="Pets" value="Si" id="Si">
