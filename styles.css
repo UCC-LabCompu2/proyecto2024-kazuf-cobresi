@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright&family=Petit+Formal+Script&display=swap');
 
 .CAFE {
-    background: url('images/Screen Shot 2024-05-21 at 14.03.43.png');
+    background: url('images/Fondo Index.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -89,7 +89,7 @@ body{
 /* -------------------------Ubicaciones--------------------------------------------- */
 
 .Ubicacion {
-    background: url('images/Screen Shot 2024-05-21 at 15.04.47.png');
+    background: url('images/Fondo Ubicacions.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -135,7 +135,7 @@ body{
         position: relative;
         width: 350px;
         height: 250px;
-        background-image: url('images/Nueva_Córdoba.jpg');
+        background-image: url('images/NCordoba.jpg');
         background-size: cover;
         background-position: center;
         font-size: 20px;
@@ -206,7 +206,7 @@ body{
         position: relative;
         width: 350px;
         height: 250px;
-        background-image: url('images/Muy-Guemes.jpg');
+        background-image: url('images/Guemes.jpg');
         background-size: cover;
         background-position: center;
         border-radius: 10px;
@@ -277,7 +277,7 @@ body{
         position: relative;
         width: 350px;
         height: 250px;
-        background-image: url('images/Panal-2-533x300.jpg');
+        background-image: url('images/GeneralP.jpg');
         background-size: cover;
         background-position: center;
         border-radius: 10px;
@@ -360,7 +360,7 @@ body{
 
 
 .Preferencia {
-    background: url('images/Screen Shot 2024-05-21 at 18.11.28.png');
+    background: url('images/Fondo Preferencias.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -452,7 +452,7 @@ body{
 }
 
 .Resultado {
-    background: url('images/Screen Shot 2024-05-21 at 18.12.03.png');
+    background: url('images/Fondo Resultados.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -485,7 +485,7 @@ margin-block-end: 30px;
         position: relative;
         width: 200px;
         height: 150px;
-        background-image: url('images/247f9ef8-508c-4641-b1ea-cff080cec288.jpg');
+        background-image: url('images/LaCapke.jpg');
         background-size: cover;
         background-position: center;
         font-size: 20px;
@@ -557,7 +557,7 @@ margin-block-end: 30px;
         position: relative;
         width: 200px;
         height: 150px;
-        background-image: url('images/images-1.jpg');
+        background-image: url('images/Marmol.jpg');
         background-size: cover;
         background-position: center;
         font-size: 20px;
@@ -628,7 +628,7 @@ margin-block-end: 30px;
         position: relative;
         width: 200px;
         height: 150px;
-        background-image: url('images/images.jpg');
+        background-image: url('images/LeRome.jpg');
         background-size: cover;
         background-position: center;
         border-radius: 10px;
@@ -701,7 +701,7 @@ margin-block-end: 30px;
     position: relative;
     width: 200px;
     height: 150px;
-    background-image: url('images/image212s.jpg');
+    background-image: url('images/Fulano.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -773,7 +773,7 @@ margin-block-end: 30px;
     position: relative;
     width: 200px;
     height: 150px;
-    background-image: url('images/379f2ef7-173f-411b-a68c-ab2c4975a212.jpg');
+    background-image: url('images/Selah.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -846,7 +846,7 @@ margin-block-end: 30px;
     position: relative;
     width: 200px;
     height: 150px;
-    background-image: url('images/104d0131-fee8-4b85-a0e8-e4f41b5f3f4b.jpg');
+    background-image: url('images/UnCafe.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 10px;
