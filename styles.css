@@ -1,6 +1,7 @@
 /* -------------------------Inicio--------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright&family=Petit+Formal+Script&display=swap');
 
+
 .CAFE {
     background: url('images/Fondo Index.png');
     background-size: cover;
@@ -15,78 +16,96 @@
     justify-content: space-between;
     height: 100vh;
     text-align: center;
-body{
 
-}
+    /* Se elimino espacio vacio */
+    /*
+       .volver1 {
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100px;
+           height: 100px;
+           background: transparent;
+           border: none;
+           cursor: pointer;
+       }*/
 
-    main {
+       main {
 
-        padding: 20px;
-    }
+           padding: 20px;
+       }
 
-    #Formulario_de_preferencias {
-        display: inline-block;
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    .form-group input[type="checkbox"],
-    .form-group input[type="radio"] {
-        margin-right: 10px;
-    }
-
-    .boton {
-        font-family: "Times New Roman";
-        padding: 25px 70px;
-        border-radius: 50px;
-        cursor: pointer;
-        border: 0;
-        color: hsl(0, 0%, 0%);
-        background-color: white;
-        box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        font-size: 20px;
-        transition: all 0.5s ease;
-        margin-top: 523px;
-        display: inline-block;
-
-        a:link , a:visited{
-            color: hsl(0, 0%, 0%);
-        }
-    }
-
-    .boton:hover {
-        letter-spacing: 3px;
-        background-color: hsl(25, 57%, 41%);
-        color: hsl(0, 0%, 100%);
-        box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
-    }
-
-    .boton:active {
-        letter-spacing: 3px;
-        background-color: hsl(25, 58%, 22%);
-        color: hsl(0, 0%, 100%);
-        box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
-        transform: translateY(10px);
-        transition: 100ms;
-    }
+       .mi-imagen {
+           position: absolute;
+           top: 10px;
+           left: 10px;
+       }
 
 
+       #Formulario_de_preferencias {
+           display: inline-block;
+           padding: 20px;
+           border-radius: 10px;
+       }
 
-    footer {
-        padding: 10px 0;
-        background-color: rgba(0, 0, 0, 0.84);
-        color: #cda677;
-        text-align: center;
-    }
-}
+       .form-group input[type="checkbox"],
+       .form-group input[type="radio"] {
+           margin-right: 10px;
+       }
+
+       .boton {
+           font-family: "Times New Roman";
+           padding: 25px 70px;
+           border-radius: 50px;
+           cursor: pointer;
+           border: 0;
+           color: hsl(0, 0%, 0%);
+           background-color: white;
+           box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+           letter-spacing: 1.5px;
+           text-transform: uppercase;
+           font-size: 20px;
+           transition: all 0.5s ease;
+           margin-top: 523px;
+           display: inline-block;
+
+           a:link , a:visited{
+               color: hsl(0, 0%, 0%);
+           }
+       }
+
+       .boton:hover {
+           letter-spacing: 3px;
+           background-color: hsl(25, 57%, 41%);
+           color: hsl(0, 0%, 100%);
+           box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
+       }
+
+       .boton:active {
+           letter-spacing: 3px;
+           background-color: hsl(25, 58%, 22%);
+           color: hsl(0, 0%, 100%);
+           box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+           transform: translateY(10px);
+           transition: 100ms;
+       }
+
+
+
+       footer {
+           padding: 10px 0;
+           background-color: rgba(0, 0, 0, 0.84);
+           color: #cda677;
+           text-align: center;
+       }
+   }
 
 
 
 
 
-/* -------------------------Ubicaciones--------------------------------------------- */
+   /* -------------------------Ubicaciones--------------------------------------------- */
+
 
 .Ubicacion {
     background: url('images/Fondo Ubicacions.png');
@@ -103,11 +122,6 @@ body{
     height: 100vh;
     text-align: center;
     color: #fff;
-
-
-    body{
-
-    }
 
     main {
 
@@ -353,9 +367,6 @@ body{
 }
 
 
-
-
-
 /* -------------------------Preferencias--------------------------------------------- */
 
 
@@ -375,12 +386,11 @@ body{
     justify-content: space-between;
     height: 100vh;
     text-align: center;
-    body{
-
-    }
+}
 
     main {
-
+        flex-direction: row;
+        justify-content: space-between;
         padding: 20px;
     }
 
@@ -434,21 +444,29 @@ body{
         transition: 100ms;
     }
 
-
-
     footer {
         padding: 10px 0;
         background-color: rgba(0, 0, 0, 0.84);
         color: #cda677;
         text-align: center;
     }
+
+.canvasContainer {
+    margin: 100px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.71);
+    border-radius: 70px;
+    text-align: center;
+    font-size: 15px;
+    margin-right: 100px;
+
 }
 
 
 /* -------------------------Resultados--------------------------------------------- */
 
 .espacio {
-    margin-top: 70px;
+    margin-top: 230px;
 }
 
 .Resultado {
@@ -461,7 +479,7 @@ body{
     justify-content: space-between;
     height: 100vh;
     text-align: center;
-    color: #fff;
+    color: rgba(255, 255, 255, 0);
 
     .Resultado2 {
 
@@ -921,10 +939,5 @@ footer {
 }
 }
 }
-
-
-
-
-
-
+/* -------------------------Canva--------------------------------------------- */
 

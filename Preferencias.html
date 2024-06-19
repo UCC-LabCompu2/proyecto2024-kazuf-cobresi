@@ -11,47 +11,99 @@
     <title></title>
 </head>
 
-<header class="header">
-    <h1 id="Titulo_principal">
-    </h1>
-
-</header>
-
+<header class="header"></header>
+<!-- se quito titulo innecesario -->
 <body class="Preferencia">
 <main>
-    <form id="Formulario_de_preferencias">
 
-        <p>
-            Preferencias:<br><label for="Vegetariano">Vegetariano</label> <input type="checkbox" name="Preferencias"
-                                                                              value="Vegetariano" id="Vegetariano">
-            <label for="Vegano">Vegano</label> <input type="checkbox" name="Preferencias" value="Vegano" id="Vegano">
-            <label for="Sin_tacc">Sin tacc</label> <input type="checkbox" name="Preferencias" value="Sin_tacc"
-                                                          id="Sin_tacc">
-            <label for="Sin_preferencias">Sin preferencias</label> <input type="checkbox" name="Preferencias"
-                                                                          value="Sin_preferencias"
-                                                                          id="Sin_preferencias">
+    <form id="Formulario_de_preferencias"> <!-- reordenamiento de codigo -->
+
+        <p>Preferencias:<br>
+
+            <label for="Vegetariano">Vegetariano</label>
+            <input type="checkbox" name="Preferencias" value="Vegetariano" id="Vegetariano">
+
+            <label for="Vegano">Vegano</label>
+            <input type="checkbox" name="Preferencias" value="Vegano" id="Vegano">
+
+            <label for="Sin_tacc">Sin tacc</label>
+            <input type="checkbox" name="Preferencias" value="Sin_tacc" id="Sin_tacc">
+
+            <label for="Sin_preferencias">Sin preferencias</label>
+            <input type="checkbox" name="Preferencias" value="Sin_preferencias" id="Sin_preferencias">
         </p>
         <p>
-            <br>Consumir: <br><label for="Salon">Salon</label><input type="radio" name="Consumir" value="Salon" id="Salon">
-            <label for="Take_away">Take away</label> <input type="radio" name="Consumir" value="Take_away"
-                                                            id="Take_away">
+            <br>Consumir: <br><label for="Salon">Salon</label>
+            <input type="radio" name="Consumir" value="Salon" id="Salon">
+
+            <label for="Take_away">Take away</label>
+            <input type="radio" name="Consumir" value="Take_away" id="Take_away">
         </p>
         <p>
-                <br>Pet Friendly:<br> <label for="Si">Si</label> <input type="radio" name="Pets" value="Si" id="Si">
+                <br>Pet Friendly:<br>
+            <label for="Si">Si</label> <input type="radio" name="Pets" value="Si" id="Si">
             <label for="No">No</label> <input type="radio" name="Pets" value="No" id="No">
         </p>
     </form>
 </main>
+
 <p>
     <button class="boton">
-        <a href="http://localhost:63343/proyecto2024-kazuf-cobresi/Resultados.html">Buscar</a>
+        <a href="http://localhost:63342/proyecto2024-kazuf-cobresi/Resultados.html?_ijt=tl251dl9vb9g5l09dak713q77j">Buscar</a>
     </button>
 </p>
+
+
+<div class="canvasContainer">
+    <h1>Popularidad de Cafés en Nueva Córdoba</h1>
+    <canvas id="popularityChart" width="500" height="300"></canvas>
+</div>
+
+
+<script>
+    const cafes = ["Marmol", "La Capke", "Selah", "Fulano", "Un Café", "Le Roma"];
+    const popularidad = [85, 90, 75, 60, 70, 80]; // Ejemplo de datos de popularidad
+    const canvas = document.getElementById('popularityChart');
+    const ctx = canvas.getContext('2d');
+
+    // Definir las dimensiones del gráfico
+    const chartWidth = canvas.width - 40;
+    const chartHeight = canvas.height - 40;
+    const barWidth = chartWidth / cafes.length;
+    const maxPopularidad = Math.max(...popularidad);
+
+    // Dibujar el gráfico de barras
+    ctx.fillStyle = '#f4d2aa';
+    for (let i = 0; i < cafes.length; i++) {
+        const barHeight = (popularidad[i] / maxPopularidad) * chartHeight;
+        const x = 20 + i * barWidth;
+        const y = canvas.height - barHeight - 20;
+        ctx.fillRect(x, y, barWidth - 10, barHeight);
+
+        // Añadir etiquetas de texto
+        ctx.fillStyle = '#000';
+        ctx.font = '14px Arial';
+        ctx.fillText(cafes[i], x, canvas.height - 5);
+        ctx.fillText(popularidad[i], x, y - 5);
+        ctx.fillStyle = '#f4d2aa';
+    }
+
+    // Dibujar los ejes
+    ctx.strokeStyle = '#000';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(20, 20);
+    ctx.lineTo(20, canvas.height - 20);
+    ctx.lineTo(canvas.width - 20, canvas.height - 20);
+    ctx.stroke();
+</script>
+
 
 <footer>
     <p>&copy; 2024 Cafes de Cordoba. Todos los derechos reservados de autor</p>
 </footer>
 
+<script src="script.js"></script>
 
 </body>
 </html>
