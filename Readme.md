@@ -47,7 +47,18 @@ http://localhost:63343/proyecto2024-kazuf-cobresi/Resultados.html)
 
 *Items:* -
 
-*Tablas:* -
+*Tablas:(Para la comprencion de la logica,aqui se presenta una tabla donde especifica las preferencias de cada cafeteria.* -
+
+| Cafeterias | Vegetariano | Vegano | Sin Tacc | Salon  | Take Away | Pet Friendly | Ubicacion   |
+|------------|-------------|--------|----------|--------|-----------|--------------|-------------|
+| LaCupke    | ✅          | Fila 1 | ✅   | ✅ | Fila 1    | ✅     | Guemes      |
+| UnCafe     | Fila 2      | Fila 2 | ✅   | ✅ | ✅    | ✅       | Guemes      |
+| Selah      | Fila 3      | Fila 3 | Fila 3   | Fila 3 | Fila 3    | ✅      | General Paz |
+| Marmol     | Fila 4      | Fila 4 | Fila 4   | Fila 4 | Fila 4    | Fila 4       | General Paz |
+| Fulano     | Fila 5      | Fila 5 | Fila 5   | Fila 5 | Fila 5    | Fila 5       | Nueva C.    |
+| LeRoma     | Fila 6      | Fila 6 | Fila 6   | Fila 6 | Fila 6    | Fila 6       | Nueva C.    |
+
+
 
 *Index:* -
 

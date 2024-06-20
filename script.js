@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 sinTacc: "si",
                 consume: "Salon",
                 petFriendly: "si",
+                imageUrl: "images/Selah.jpg",
                 instagram: "https://www.instagram.com/selahrefugiodecafe?igsh=MTRtcWljeGhwamFmNA==",
                 page: "https://drive.google.com/file/d/1ygq3TMBbkbN1D1xglVIND04okp8pjMDu/view?fbclid=PAZXh0bgNhZW0CMTEAAaYVPYe8dZzHlTyYo_PRKw4CSYDlROPjoW2jHIP2uUprLA2Q8WgdTKZWxtA_aem_AXaGswL1NgMAGyiSxCg-R5iZVLnkXP1h9RHJlXdvyDbFVMa5cLt8j_nlLrRtuOBkSFPguDQzvuocfjcPXriyF2LX"
             },
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 sinTacc: "si",
                 consume: "Salon",
                 petFriendly: "si",
+                imageUrl: "images/LaCapke.jpg",
                 instagram: "https://www.instagram.com/lacapke?igsh=NGlhajJsMHFuYjFx",
                 page: "https://linktr.ee/LaCapke.Quiero?fbclid=PAZXh0bgNhZW0CMTEAAabCu81Zi_PAxxGq1b6bacBK6hSRXKLEDokeikUIOuSvVAZnEIWPBDRMQ-Y_aem_AXanMiaiWazSpzx35BH1pqKyTgGA-C697wKtDBGWtEt0r1Zw4bawFa5INr0NgcseUnJgu611NzXA6XEb9ATsagxG"
             },
@@ -68,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 sinTacc: "si",
                 consume: "Salon y Take away",
                 petFriendly: "si",
+                imageUrl: "images/UnCafe.jpg",
                 instagram: "https://www.instagram.com/uncafe.ok?igsh=MTdldXdvNmg1MnB0aw==",
                 page: ""
             },
@@ -78,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 sinTacc: "no",
                 consume: "Salon y Take away",
                 petFriendly: "no",
+                imageUrl: "images/LeRome.jpg",
                 instagram: "https://www.instagram.com/leroma.ok?igsh=Zjc1aDRiZWgzM2Vr",
                 page: "https://leroma.pedix.app/sucursales"
             },
@@ -88,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 sinTacc: "si",
                 consume: "Salon",
                 petFriendly: "no",
+                imageUrl: "images/Marmol.jpg",
                 instagram: "https://www.instagram.com/marmolsiglo17?igsh=ZDY4N2dmZndwenZ0",
                 page: "https://marmolsiglo17.com/?fbclid=PAZXh0bgNhZW0CMTEAAaYxbU-b4IHidrQbDLT7BNJSLTp0Q1dliTdLJ-E2epte3Id8R2-80X85jao_aem_AXaDo9RX38PpORDLVMWrGmd5WHTD0XsvACEymlo6vq8wvpP-e4NnZNXJLVzEgwV3S3wfq2ZM6DLF4sUR5Z-EblBP"
             },
@@ -98,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 sinTacc: "si",
                 consume: "Salon y Take away",
                 petFriendly: "si",
+                imageUrl: "images/Fulano.jpg",
                 instagram: "https://www.instagram.com/fulanocafe?igsh=MTdxOGljM202ODBtbQ==",
                 page: "https://linktr.ee/fulanocafe"
             }
@@ -116,6 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
         filteredCafes.forEach(cafe => {
             const cafeCard = document.createElement('div');
             cafeCard.classList.add('card');
+            cafeCard.style.backgroundImage = `url(${cafe.imageUrl})`;
             cafeCard.innerHTML = `
                 <p>
                     <button type="button" name="Result" value="${cafe.name}">
