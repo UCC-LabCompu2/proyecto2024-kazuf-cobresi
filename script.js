@@ -47,7 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 vegano: "si",
                 sinTacc: "si",
                 consume: "Salon",
-                petFriendly: "si"
+                petFriendly: "si",
+                instagram: "https://www.instagram.com/selahrefugiodecafe?igsh=MTRtcWljeGhwamFmNA==",
+                page: "https://drive.google.com/file/d/1ygq3TMBbkbN1D1xglVIND04okp8pjMDu/view?fbclid=PAZXh0bgNhZW0CMTEAAaYVPYe8dZzHlTyYo_PRKw4CSYDlROPjoW2jHIP2uUprLA2Q8WgdTKZWxtA_aem_AXaGswL1NgMAGyiSxCg-R5iZVLnkXP1h9RHJlXdvyDbFVMa5cLt8j_nlLrRtuOBkSFPguDQzvuocfjcPXriyF2LX"
             },
             {
                 name: "Lacapke",
@@ -55,7 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 vegano: "no",
                 sinTacc: "si",
                 consume: "Salon",
-                petFriendly: "si"
+                petFriendly: "si",
+                instagram: "https://www.instagram.com/lacapke?igsh=NGlhajJsMHFuYjFx",
+                page: "https://linktr.ee/LaCapke.Quiero?fbclid=PAZXh0bgNhZW0CMTEAAabCu81Zi_PAxxGq1b6bacBK6hSRXKLEDokeikUIOuSvVAZnEIWPBDRMQ-Y_aem_AXanMiaiWazSpzx35BH1pqKyTgGA-C697wKtDBGWtEt0r1Zw4bawFa5INr0NgcseUnJgu611NzXA6XEb9ATsagxG"
             },
             {
                 name: "Uncafe",
@@ -63,7 +67,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 vegano: "no",
                 sinTacc: "si",
                 consume: "Salon y Take away",
-                petFriendly: "si"
+                petFriendly: "si",
+                instagram: "https://www.instagram.com/uncafe.ok?igsh=MTdldXdvNmg1MnB0aw==",
+                page: ""
             },
             {
                 name: "Leroma",
@@ -71,7 +77,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 vegano: "no",
                 sinTacc: "no",
                 consume: "Salon y Take away",
-                petFriendly: "no"
+                petFriendly: "no",
+                instagram: "https://www.instagram.com/leroma.ok?igsh=Zjc1aDRiZWgzM2Vr",
+                page: "https://leroma.pedix.app/sucursales"
             },
             {
                 name: "Marmol",
@@ -79,7 +87,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 vegano: "si",
                 sinTacc: "si",
                 consume: "Salon",
-                petFriendly: "no"
+                petFriendly: "no",
+                instagram: "https://www.instagram.com/marmolsiglo17?igsh=ZDY4N2dmZndwenZ0",
+                page: "https://marmolsiglo17.com/?fbclid=PAZXh0bgNhZW0CMTEAAaYxbU-b4IHidrQbDLT7BNJSLTp0Q1dliTdLJ-E2epte3Id8R2-80X85jao_aem_AXaDo9RX38PpORDLVMWrGmd5WHTD0XsvACEymlo6vq8wvpP-e4NnZNXJLVzEgwV3S3wfq2ZM6DLF4sUR5Z-EblBP"
             },
             {
                 name: "Fulano",
@@ -87,12 +97,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 vegano: "no",
                 sinTacc: "si",
                 consume: "Salon y Take away",
-                petFriendly: "si"
+                petFriendly: "si",
+                instagram: "https://www.instagram.com/fulanocafe?igsh=MTdxOGljM202ODBtbQ==",
+                page: "https://linktr.ee/fulanocafe"
             }
         ];
-
-
-
 
         const filteredCafes = cafes.filter(cafe => {
             return cafe.location === selectedLocation &&
@@ -112,8 +121,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <button type="button" name="Result" value="${cafe.name}">
                         <div class="card__content">
                             <p class="card__title">${cafe.name}</p>
-                            <a href="https://www.instagram.com/${cafe.name.toLowerCase()}">Instagram</a><br>
-                            <a href="https://${cafe.name.toLowerCase()}.com">Pagina</a>
+                            <a href="${cafe.instagram}">Instagram</a><br>
+                            <a href="${cafe.page}">Pagina</a>
                         </div>
                     </button>
                 </p>
@@ -122,11 +131,45 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Dibujar gráfico de popularidad
+    const cafes = ["Marmol", "La Capke", "Selah", "Fulano", "Un Café", "Le Roma"];
+    const popularidad = [85, 90, 75, 60, 70, 80]; // Ejemplo de datos de popularidad
+    const canvas = document.getElementById('popularityChart');
+    if (canvas) {
+        const ctx = canvas.getContext('2d');
+
+        // Definir las dimensiones del gráfico
+        const chartWidth = canvas.width - 40;
+        const chartHeight = canvas.height - 40;
+        const barWidth = chartWidth / cafes.length;
+        const maxPopularidad = Math.max(...popularidad);
+
+        // Dibujar el gráfico de barras
+        ctx.fillStyle = '#f4d2aa';
+        for (let i = 0; i < cafes.length; i++) {
+            const barHeight = (popularidad[i] / maxPopularidad) * chartHeight;
+            const x = 20 + i * barWidth;
+            const y = canvas.height - barHeight - 20;
+            ctx.fillRect(x, y, barWidth - 10, barHeight);
+
+            // Añadir etiquetas de texto
+            ctx.fillStyle = '#000';
+            ctx.font = '14px Arial';
+            ctx.fillText(cafes[i], x, canvas.height - 5);
+            ctx.fillText(popularidad[i], x, y - 5);
+            ctx.fillStyle = '#f4d2aa';
+        }
+
+        // Dibujar los ejes
+        ctx.strokeStyle = '#000';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(20, 20);
+        ctx.lineTo(20, canvas.height - 20);
+        ctx.lineTo(canvas.width - 20, canvas.height - 20);
+        ctx.stroke();
+    }
 });
-
-
-
-
 
 
 
