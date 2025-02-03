@@ -3,7 +3,7 @@ const cafeterias = [
     { nombre: "Pauza", zona: "nva_cba", ambiente: "tranquilo", preferencia: "cafe" },
     { nombre: "Standard 69", zona: "nva_cba", ambiente: "tranquilo", preferencia: "comida" },
     { nombre: "Verasens", zona: "nva_cba", ambiente: "vibrante", preferencia:"comida" },
-    { nombre: "Selah", zona: "nva_cba", ambiente: "vibrante", preferencia:"cafe" },
+    { nombre: "Selah", zona: "nva_cba", ambiente: "familiar", preferencia:"cafe" },
     { nombre: "Fulano", zona: "nva_cba", ambiente: "vibrante", preferencia:"cafe" },
     { nombre: "Cafe de Barrio", zona: "nva_cba", ambiente: "tranquilo", preferencia:"cafe" },
     { nombre: "Un Cafe", zona: "nva_cba", ambiente: "tranquilo", preferencia:"cafe" },
@@ -19,6 +19,7 @@ const cafeterias = [
     { nombre: "Maria Antonieta", zona: "znorte", ambiente: "vibrante", preferencia:"comida" },
     { nombre: "Rue Cannelle", zona: "znorte", ambiente: "vibrante", preferencia:"comida" },
     { nombre: "Oreste", zona: "znorte", ambiente: "tranquilo", preferencia:"comida" },
+    { nombre: "Merce", zona: "znorte", ambiente: "tranquilo", preferencia:"comida" },
     { nombre: "Renato", zona: "znorte", ambiente: "tranquilo", preferencia:"cafe" },
 
 
@@ -28,6 +29,9 @@ const cafeterias = [
     { nombre: "Eliseo", zona: "zcentro", ambiente: "familiar", preferencia:"cafe" },
     { nombre: "Nectar", zona: "zcentro", ambiente: "tranquilo", preferencia:"cafe" },
     { nombre: "Marmol", zona: "zcentro", ambiente: "vibrante", preferencia:"comida" },
+    { nombre: "El Tazon", zona: "zcentro", ambiente: "familiar", preferencia:"comida" },
+    { nombre: "Le Dureau", zona: "zcentro", ambiente: "vibrante", preferencia:"cafe" },
+    { nombre: "Morfeta", zona: "zcentro", ambiente: "tranquilo", preferencia:"comida" },
 ];
 
 //  Detectar en qué página estamos
@@ -74,12 +78,7 @@ if (document.getElementById("cafeterias")) {
             contenedor.appendChild(cafeElemento);
         });
     } else {
-        contenedor.innerHTML = "<p>Asegurate de elegir tus preferencias.</p>";
+        contenedor.innerHTML = "<p>Asegurate de completar el cuestionario.</p>";
     }
 
-
-    // Botón para volver a la página principal
-    document.getElementById("btnVolver").addEventListener("click", function () {
-        window.location.href = "index.html";
-    });
 }
