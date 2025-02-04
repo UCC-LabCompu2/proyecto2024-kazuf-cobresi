@@ -4,16 +4,37 @@
     <meta charset="UTF-8">
     <title>Café Córdoba</title>
     <link rel="shortcut icon" href="imagenes/Granito%20de%20cafe.png">
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- Fuente "Anaktoria" para "Café" -->
+    <link href="https://fonts.cdnfonts.com/css/anaktoria" rel="stylesheet">
+
+    <!-- Fuente "Cardo" para "Córdoba" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <header>
-    <h1 id="titulo_principal">Café Córdoba</h1>
+    <h1 id="titulo_principal">
+        <span class="titulo-cafe">Café</span>
+        <span class="titulo-cordoba">Córdoba</span>
+    </h1>
+
 </header>
 <body>
+<canvas id="backgroundCanvas"></canvas>
 
-<h2>Cafeterías recomendadas</h2>
+
+<!--<h2>Cafeterías recomendadas</h2>-->
 <div id="cafeterias"></div>
 
 <script src="script.js"></script>
 </body>
-<button onclick="window.location.href='index.html'">Volver a empezar</button>
+<button id="btnVolver">
+    Volver a empezar
+</button>
+
+<!-- <button onclick="window.location.href='index.html'">Volver a empezar</button> -->
 </html>

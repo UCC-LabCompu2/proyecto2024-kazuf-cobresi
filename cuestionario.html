@@ -4,45 +4,65 @@
     <meta charset="UTF-8">
     <title>Café Córdoba</title>
     <link rel="shortcut icon" href="imagenes/Granito%20de%20cafe.png">
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- Fuente "Anaktoria" para "Café" -->
+    <link href="https://fonts.cdnfonts.com/css/anaktoria" rel="stylesheet">
+
+    <!-- Fuente "Cardo" para "Córdoba" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
 
     </style>
 </head>
-<header>
-  <h1 id="titulo_cuestionario">Café Córdoba</h1>
-</header>
 <body>
-<p>
-  <label for="zona">Zona</label>
-  <select name="zona" id="zona">
-      <option value="OpcionZona">Opciones</option>
-      <option value="znorte">Zona Norte</option>
-      <option value="zcentro">Zona Centro</option>
-      <option value="nva_cba">Nueva Córdoba</option>
-  </select>
-</p>
-<p>
-  <label for="ambiente">Ambiente</label>
-  <select name="ambiente" id="ambiente">
-      <option value="OpcionAmbiente">Opciones</option>
-      <option value="tranquilo">Tranquilo</option>
-      <option value="vibrante">Vibrante</option>
-      <option value="familiar">Familiar</option>
-      <option value="sin_ambiente">Sin preferencia</option>
-  </select>
-</p>
-<p>
-  <label for="preferencia">Preferencia</label>
-  <select name="preferencia" id="preferencia">
-      <option value="OpcionPreferencia">Opciones</option>
-      <option value="cafe">Café</option>
-      <option value="comida">Comida</option>
-      <option value="sin_preferencia">Sin preferencia</option>
-  </select>
-</p>
+<canvas id="backgroundCanvas"></canvas>
 
+<div class="contenedor-principal">
+    <h1 id="titulo_principal">
+        <span class="titulo-cafe">Café</span>
+        <span class="titulo-cordoba">Córdoba</span>
+    </h1>
 
-<button type="button" id="btnEnviar" onclick="window.location.href='Resultados.html'">Enviar</button>
+    <div class="contenedor-formulario">
+        <label for="zona">Zona</label>
+        <select name="zona" id="zona">
+            <option value="OpcionZona">Opciones</option>
+            <option value="znorte">Zona Norte</option>
+            <option value="zcentro">Zona Centro</option>
+            <option value="nva_cba">Nueva Córdoba</option>
+        </select>
+
+        <label for="ambiente">Ambiente</label>
+        <select name="ambiente" id="ambiente">
+            <option value="OpcionAmbiente">Opciones</option>
+            <option value="tranquilo">Tranquilo</option>
+            <option value="vibrante">Vibrante</option>
+            <option value="familiar">Familiar</option>
+            <option value="sin_ambiente">Sin preferencia</option>
+        </select>
+
+        <label for="preferencia">Preferencia</label>
+        <select name="preferencia" id="preferencia">
+            <option value="OpcionPreferencia">Opciones</option>
+            <option value="cafe">Café</option>
+            <option value="comida">Comida</option>
+            <option value="sin_preferencia">Sin preferencia</option>
+        </select>
+
+        <button type="button" id="btnEnviar">
+            <img src="imagenes/botton_siguiente.png" alt="Enviar">
+        </button>
+
+    </div> <!-- Cierre del div contenedor -->
+</div> <!-- Cierre del contenedor principal -->
+
+<!-- Agrega el script aquí, justo antes de </body> -->
 <script src="script.js"></script>
+
 </body>
 </html>

@@ -35,41 +35,46 @@ const cafeterias = [
 ];
 
 //  Detectar en qué página estamos
-if (document.getElementById("btnEnviar")) {
-    //  Estamos en `index.html`, capturamos los datos y redirigimos
-    document.getElementById("btnEnviar").addEventListener("click", function () {
-        let zona = document.getElementById("zona").value;
-        let ambiente = document.getElementById("ambiente").value;
-        let preferencia = document.getElementById("preferencia").value;
+document.addEventListener("DOMContentLoaded", function () {
+    let btnEnviar = document.getElementById("btnEnviar");
 
-        // Guardamos los valores en localStorage
-        localStorage.setItem("zona", zona);
-        localStorage.setItem("ambiente", ambiente);
-        localStorage.setItem("preferencia", preferencia);
+    if (btnEnviar) {
+        btnEnviar.addEventListener("click", function (event) { //  Capturamos el evento para evitar redirección
+            let zona = document.getElementById("zona").value;
+            let ambiente = document.getElementById("ambiente").value;
+            let preferencia = document.getElementById("preferencia").value;
 
-        // Redirigir a `resultados.html`
-        window.location.href = "resultados.html";
-    });
-}
+            // Verificar si alguna opción sigue sin seleccionarse
+            if (zona === "OpcionZona" || ambiente === "OpcionAmbiente" || preferencia === "OpcionPreferencia") {
+                alert("⚠️ Debes seleccionar una opción en todas las categorías antes de continuar.");
+                return; //  Detiene la ejecución para que NO redirija
+            }
 
+            // Si todas las opciones están completas, guardamos en localStorage y redirigimos
+            localStorage.setItem("zona", zona);
+            localStorage.setItem("ambiente", ambiente);
+            localStorage.setItem("preferencia", preferencia);
 
+            console.log(" Redirigiendo a Resultados.html...");
+            window.location.href = "resultados.html";
+        });
+    }
+});
+
+// Si estamos en `resultados.html`, mostramos las cafeterías filtradas
 if (document.getElementById("cafeterias")) {
-    //  Estamos en `resultados.html`, mostramos las cafeterías filtradas
     let zonaSeleccionada = localStorage.getItem("zona");
     let ambienteSeleccionado = localStorage.getItem("ambiente");
     let preferenciaSeleccionada = localStorage.getItem("preferencia");
 
-
-// Filtrar cafeterías según la selección
+    // Filtrar cafeterías según la selección del usuario
     const cafeteriasFiltradas = cafeterias.filter(cafe =>
         (zonaSeleccionada === "sin_preferencia" || cafe.zona === zonaSeleccionada) &&
         (ambienteSeleccionado === "sin_ambiente" || cafe.ambiente === ambienteSeleccionado) &&
         (preferenciaSeleccionada === "sin_preferencia" || cafe.preferencia === preferenciaSeleccionada)
     );
 
-
-
-// Mostrar cafeterías en `resultados.html`
+    // Mostrar cafeterías en `resultados.html`
     const contenedor = document.getElementById("cafeterias");
 
     if (cafeteriasFiltradas.length > 0) {
@@ -77,32 +82,112 @@ if (document.getElementById("cafeterias")) {
             let cafeElemento = document.createElement("div");
             cafeElemento.classList.add("cafe-item");
 
-            // Agregar logo si está disponible
+            // Imagen del café
             let logoImg = document.createElement("img");
             logoImg.src = cafe.logo;
             logoImg.alt = `Logo de ${cafe.nombre}`;
-            logoImg.classList.add("logo");
+            logoImg.classList.add("imagen-cafeteria");
 
-            // Agregar nombre del café
-            let nombre = document.createElement("span");
+            // Contenedor del texto
+            let textoDiv = document.createElement("div");
+            textoDiv.classList.add("texto-cafeteria");
+
+            // Nombre del café
+            let nombre = document.createElement("div");
             nombre.textContent = cafe.nombre;
+            nombre.classList.add("nombre-cafeteria");
 
-            // Agregar enlace a Instagram
+            // Link de Instagram
             let instagramLink = document.createElement("a");
             instagramLink.href = cafe.instagram;
             instagramLink.textContent = "Instagram";
             instagramLink.target = "_blank";
             instagramLink.classList.add("instagram-link");
 
-            // Agregar elementos al contenedor
-            cafeElemento.appendChild(logoImg);
-            cafeElemento.appendChild(nombre);
-            cafeElemento.appendChild(instagramLink);
+            // Agregar texto al contenedor
+            textoDiv.appendChild(nombre);
+            textoDiv.appendChild(instagramLink);
 
+            // Agregar imagen y texto al contenedor principal
+            cafeElemento.appendChild(logoImg);
+            cafeElemento.appendChild(textoDiv);
+
+            // Agregar al contenedor de cafeterías
             contenedor.appendChild(cafeElemento);
         });
     } else {
         contenedor.innerHTML = "<p>Asegúrate de completar el cuestionario.</p>";
     }
-
 }
+
+// Botón para volver a `index.html`
+document.addEventListener("DOMContentLoaded", function () {
+    let btnVolver = document.getElementById("btnVolver");
+
+    if (btnVolver) {
+        btnVolver.addEventListener("click", function () {
+            console.log(" Redirigiendo a index.html...");
+            window.location.href = "index.html"; // Redirige a la página de inicio
+        });
+    }
+});
+
+// Botón para empezar el cuestionario
+document.addEventListener("DOMContentLoaded", function () {
+    let btnStart = document.getElementById("btnStart");
+
+    if (btnStart) {
+        btnStart.addEventListener("click", function () {
+            console.log("Redirigiendo a cuestionario.html...");
+            window.location.href = "cuestionario.html";
+        });
+    }
+});
+
+// Botón para volver a información
+document.addEventListener("DOMContentLoaded", function () {
+    let btnVolverInfo = document.getElementById("btnVolverInfo");
+
+    if (btnVolverInfo) {
+        btnVolverInfo.addEventListener("click", function () {
+            window.location.href = "index.html";
+        });
+    }
+});
+
+// Fondo dinámico con partículas
+document.addEventListener("DOMContentLoaded", function () {
+    let canvas = document.getElementById("backgroundCanvas");
+    if (canvas) {
+        let ctx = canvas.getContext("2d");
+
+        // Ajustar tamaño del canvas al tamaño de la pantalla
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Dibujar partículas suaves como decoración
+        function drawParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < 15; i++) {
+                let x = Math.random() * canvas.width;
+                let y = Math.random() * canvas.height;
+                let size = Math.random() * 5 + 2;
+
+                ctx.fillStyle = "rgba(139, 94, 59, 0.3)"; // Marrón semi-transparente
+                ctx.beginPath();
+                ctx.arc(x, y, size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        // Dibujar partículas cada 2 segundos para un efecto dinámico
+        setInterval(drawParticles, 2000);
+
+        // Ajustar el canvas si cambia el tamaño de la ventana
+        window.addEventListener("resize", function () {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            drawParticles();
+        });
+    }
+});

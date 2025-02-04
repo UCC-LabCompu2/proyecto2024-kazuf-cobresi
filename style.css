@@ -1,0 +1,430 @@
+#titulo_principal {
+    text-align: center; /* Centrar el texto */
+    display: block; /* Evitar que estén en la misma línea */
+}
+
+/* "Café" con fuente Anaktoria */
+.titulo-cafe {
+    font-family: 'Anaktoria', sans-serif !important;
+    font-size: 60px;
+    font-weight: normal;
+    display: block; /* Hace que "Café" quede arriba */
+}
+
+/* "Córdoba" con fuente Cardo */
+.titulo-cordoba {
+    font-family: "Cardo", serif !important;
+    font-size: 20px;
+    font-weight: 700;
+    display: block; /* Hace que "Córdoba" quede abajo */
+}
+
+
+/* Centrar la lista en la página */
+#cafeterias {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente (si es necesario) */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Contenedor de cada cafetería */
+.cafe-item {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre la imagen y el texto */
+    margin-bottom: 15px; /* Espacio entre cada cafetería */
+    padding: 10px;
+    width: fit-content; /* Ajusta el ancho al contenido */
+}
+
+/* Imagen de la cafetería */
+.imagen-cafeteria {
+    width: 5cm;
+    height: 5cm;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Contenedor del texto */
+.texto-cafeteria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estilo del nombre */
+.nombre-cafeteria {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Estilo del link */
+.instagram-link {
+    color: #604736;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.instagram-link:hover {
+    text-decoration: underline;
+}
+
+/* Fondo para todas las páginas */
+body {
+    background-image: url('imagenes/Fondo_CafeCordoba.png'); /* Ruta de la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
+    background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
+}
+
+/* Estilo para centrar todo en la página */
+.contenedor-principal {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la pantalla */
+}
+
+/* Estilo del contenedor del formulario */
+.contenedor-formulario {
+    background-color: rgba(181, 153, 120, 0.8); /* Color beige con transparencia */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+/* Estilos de los labels */
+.contenedor-formulario label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #4A3628; /* Marrón oscuro */
+}
+
+/* Estilos de los selectores */
+.contenedor-formulario select {
+    width: 80%;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #8B5E3B;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Estilo del botón de enviar */
+#btnEnviar {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px; /* Ajusta el tamaño según lo necesites */
+    height: 60px;
+}
+
+/* Imagen dentro del botón */
+#btnEnviar img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de hover */
+#btnEnviar:hover img {
+    transform: scale(1.1); /* Hace un pequeño zoom al pasar el mouse */
+}
+
+/* Estilo refinado del botón "Volver a empezar" */
+#btnVolver {
+    background-color: #D2B48C; /* Beige aesthetic */
+    color: #4A3628; /* Texto marrón oscuro */
+    font-size: 16px; /* Reducido para un diseño más delicado */
+    font-weight: bold;
+    padding: 8px 18px; /* Espaciado más sutil */
+    border: 1.5px solid #8B5E3B; /* Borde más delgado */
+    border-radius: 20px; /* Bordes redondeados pero más delicados */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto; /* Centrado */
+    width: fit-content;
+}
+
+/* Efecto al pasar el mouse */
+#btnVolver:hover {
+    background-color: #8B5E3B; /* Marrón más oscuro */
+    color: white;
+    transform: scale(1.05); /* Efecto de crecimiento sutil */
+}
+
+/* Contenedor principal centrado */
+.contenedor-index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ocupar toda la pantalla */
+    text-align: center;
+}
+
+/* Estilo del título "Café Córdoba" */
+#titulo_principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Espacio entre el título y el botón */
+}
+
+/* "Café" con fuente elegante */
+.titulo-cafe {
+    font-family: 'Anaktoria', sans-serif;
+    font-size: 70px; /* Tamaño más grande */
+    font-weight: normal;
+}
+
+/* "Córdoba" con fuente refinada */
+.titulo-cordoba {
+    font-family: "Cardo", serif;
+    font-size: 24px; /* Más pequeño y delicado */
+    font-weight: 700;
+    letter-spacing: 2px; /* Espaciado para más elegancia */
+}
+
+/* Estilo refinado del botón "START" */
+#btnStart {
+    background-color: #5C3A1D; /* Marrón oscuro aesthetic */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 32px;
+    border: none;
+    border-radius: 25px; /* Bordes bien redondeados */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Espaciado entre letras */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+/* Efecto al pasar el mouse */
+#btnStart:hover {
+    background-color: #8B5E3B; /* Marrón más claro */
+    transform: scale(1.05); /* Efecto de crecimiento sutil */
+}
+
+/* Estilizar el footer */
+footer {
+    position: absolute;
+    bottom: 10px; /* Espaciado desde abajo */
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #4A3628; /* Marrón oscuro */
+}
+
+/* Estilo del footer */
+footer {
+    position: absolute;
+    bottom: 20px; /* Subimos el footer para que sea visible sin scroll */
+    width: 100%;
+    text-align: center;
+}
+
+/* Enlace "¿Quiénes somos?" */
+#link-quienes {
+    display: block;
+    font-size: 16px;
+    color: #8B5E3B; /* Marrón aesthetic */
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Efecto hover */
+#link-quienes:hover {
+    color: #5C3A1D; /* Marrón más oscuro al pasar el mouse */
+}
+
+/* Estilo del texto de derechos reservados */
+#texto-footer {
+    font-size: 12px;
+    color: #4A3628; /* Marrón oscuro */
+    margin-top: 5px;
+}
+
+/* Estilo del botón "Volver" */
+#btnVolverInfo {
+    background-color: #D2B48C; /* Beige aesthetic */
+    color: #4A3628; /* Marrón oscuro */
+    font-size: 14px; /* Tamaño más pequeño */
+    font-weight: bold;
+    padding: 6px 16px;
+    border: 1.5px solid #8B5E3B;
+    border-radius: 15px; /* Bordes más suaves */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* Efecto hover del botón */
+#btnVolverInfo:hover {
+    background-color: #8B5E3B;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Estilizar el texto de derechos reservados */
+#texto-footer {
+    font-size: 12px;
+    color: #4A3628;
+    margin-top: 5px;
+}
+
+/* Canvas de fondo */
+#backgroundCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Envía el canvas al fondo */
+    pointer-events: none; /* Evita que interfiera con los clics */
+    background-color: transparent; /* Asegura que el fondo sea transparente */
+}
+
+/* ======================== */
+/* 📱 Estilos para móviles y ajustes */
+/* ======================== */
+@media screen and (max-width: 768px) {
+
+    /* Ajuste del título en móviles */
+    #titulo_principal {
+        font-size: 65px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .titulo-cafe {
+        font-size: 85px;
+    }
+
+    .titulo-cordoba {
+        font-size: 35px;
+    }
+
+    /* Asegurar que el contenido se ajuste en móviles */
+    .contenedor-index, .contenedor-principal {
+        height: auto;
+        padding: 40px;
+    }
+
+    /* Ajuste del botón START */
+    #btnStart {
+        font-size: 28px;
+        padding: 18px 50px;
+        border-radius: 35px;
+        margin-top: 20px;
+    }
+
+    /* Ajuste del cuestionario */
+    .contenedor-formulario {
+        width: 95%;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .contenedor-formulario label {
+        font-size: 22px;
+    }
+
+    .contenedor-formulario select {
+        width: 100%;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    /* Ajuste del botón de enviar */
+    #btnEnviar {
+        width: 90px;
+        height: 90px;
+    }
+
+    /* Ajuste del botón de volver */
+    #btnVolver, #btnVolverInfo {
+        font-size: 22px;
+        padding: 14px 28px;
+        margin-top: 20px;
+    }
+
+    /* Ajuste del footer */
+    footer {
+        position: relative;
+        bottom: 0;
+        padding: 30px 0;
+    }
+
+    #link-quienes {
+        font-size: 22px;
+    }
+
+    #texto-footer {
+        font-size: 18px;
+    }
+
+    /* Ajustar las imágenes de cafeterías en móviles */
+    .imagen-cafeteria {
+        width: 200px;
+        height: 200px;
+    }
+
+    .nombre-cafeteria {
+        font-size: 26px;
+    }
+
+    .instagram-link {
+        font-size: 22px;
+    }
+
+    /* Ajustar el layout del cuestionario en móvil */
+    .contenedor-principal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #titulo_principal {
+        order: 1;
+    }
+
+    .contenedor-formulario {
+        order: 2;
+    }
+
+    /* Ajustar el aviso cuando no se completan opciones */
+    .alerta-opciones {
+        font-size: 24px;
+        text-align: center;
+        background-color: #D2B48C;
+        padding: 22px;
+        border-radius: 14px;
+    }
+}
