@@ -81,7 +81,6 @@ body {
 }
 
 /* Estilo para centrar todo en la página */
-
 .contenedor-principal {
     display: flex;
     justify-content: space-evenly;
@@ -218,7 +217,7 @@ body {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 2px; /* Espaciado entre letras */
-    box-shadow: 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
 
 /* Efecto al pasar el mouse */
@@ -275,13 +274,13 @@ footer {
     font-size: 14px; /* Tamaño más pequeño */
     font-weight: bold;
     padding: 6px 16px;
-    border: 1.5rem solid #8B5E3B;
+    border: 1.5px solid #8B5E3B;
     border-radius: 15px; /* Bordes más suaves */
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 2px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
     display: inline-block;
     margin-bottom: 5px;
 }
@@ -340,7 +339,6 @@ footer {
 
     /* Ajuste del botón START */
     #btnStart {
-
         font-size: 28px;
         padding: 18px 50px;
         border-radius: 35px;
@@ -380,7 +378,7 @@ footer {
     /* Ajuste del footer */
     footer {
         position: relative;
-        top: 13rem;
+        bottom: 0;
         padding: 30px 0;
     }
 
