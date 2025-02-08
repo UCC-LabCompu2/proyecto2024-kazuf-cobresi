@@ -351,39 +351,104 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Fondo dinámico con partículas
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
-    let canvas = document.getElementById("backgroundCanvas");
-    if (canvas) {
-        let ctx = canvas.getContext("2d");
+    const canvas = document.getElementById("ruletaCanvas");
+    const ctx = canvas.getContext("2d");
+    const btnGirar = document.getElementById("girarRuleta");
+    const resultadoTexto = document.getElementById("resultadoCafeteria");
 
-        // Ajustar tamaño del canvas al tamaño de la pantalla
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+    // Lista de cafeterías (28 en total)
+    const cafeterias = [
+        "Pauza", "Standard 69", "Verasens", "Selah", "Fulano",
+        "Cafe de Barrio", "Un Cafe", "Mousse", "La Capke", "Leroma",
+        "Anonimo", "Umami", "Casa Chacana", "Cardamomo", "Maria Antonieta",
+        "Rue Cannelle", "Oreste", "Merce", "Renato", "Nonna Nera",
+        "Giuseppe", "El Papagayo", "Eliseo", "Nectar", "Marmol",
+        "El Tazon", "Le Dureau", "Morfeta"
+    ];
 
-        // Dibujar partículas suaves como decoración
-        function drawParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            for (let i = 0; i < 15; i++) {
-                let x = Math.random() * canvas.width;
-                let y = Math.random() * canvas.height;
-                let size = Math.random() * 5 + 2;
+    // Paleta de colores marrón aesthetic
+    const colores = ["#8B5E3B", "#D2B48C", "#A67B5B", "#5C3A1D", "#C19A6B", "#E1C699", "#A07B5F"];
 
-                ctx.fillStyle = "rgba(139, 94, 59, 0.3)"; // Marrón semi-transparente
-                ctx.beginPath();
-                ctx.arc(x, y, size, 0, Math.PI * 2);
-                ctx.fill();
+    let anguloActual = 0;
+    let girando = false;
+    const cantidad = 28; // 🎡 28 espacios en la ruleta
+    const anguloSeccion = (Math.PI * 2) / cantidad;
+
+    function dibujarRuleta() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        for (let i = 0; i < cantidad; i++) {
+            let anguloInicio = anguloActual + i * anguloSeccion;
+            let anguloFin = anguloInicio + anguloSeccion;
+
+            // Dibujar el sector
+            ctx.beginPath();
+            ctx.moveTo(200, 200);
+            ctx.arc(200, 200, 200, anguloInicio, anguloFin);
+            ctx.fillStyle = colores[i % colores.length];
+            ctx.fill();
+            ctx.stroke();
+
+            // Dibujar el texto (nombre de la cafetería)
+            ctx.save();
+            ctx.translate(200, 200);
+            ctx.rotate(anguloInicio + anguloSeccion / 2);
+            ctx.fillStyle = "white";
+            ctx.font = "15px Times New Roman";
+            ctx.fillText(cafeterias[i], 100, 4);
+            ctx.restore();
+        }
+    }
+
+    function girarRuleta() {
+        if (girando) return;
+        girando = true;
+
+        let velocidad = Math.random() * 10 + 20;
+        let desaceleracion = 0.98;
+        let girosExtra = Math.random() * 4 + 2;
+        let anguloFinal = anguloActual + (Math.PI * 2 * girosExtra);
+
+        function animarGiro() {
+            anguloActual += velocidad * 0.01;
+            velocidad *= desaceleracion;
+
+            if (velocidad > 0.01) {
+                requestAnimationFrame(animarGiro);
+            } else {
+                girando = false;
+                mostrarResultado();
             }
+
+            dibujarRuleta();
         }
 
-        // Dibujar partículas cada 2 segundos para un efecto dinámico
-        setInterval(drawParticles, 2000);
-
-        // Ajustar el canvas si cambia el tamaño de la ventana
-        window.addEventListener("resize", function () {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            drawParticles();
-        });
+        animarGiro();
     }
+
+    function mostrarResultado() {
+        // Determinar el sector donde cayó el señalador
+        let indiceSeleccionado = Math.floor((Math.PI * 1.5 - anguloActual) / anguloSeccion) % cantidad;
+        if (indiceSeleccionado < 0) {
+            indiceSeleccionado += cantidad; // Asegura que sea positivo
+        }
+
+        let cafeteriaSeleccionada = cafeterias[indiceSeleccionado];
+        resultadoTexto.innerText = `☕ ¡Visita ${cafeteriaSeleccionada}!`;
+    }
+
+    btnGirar.addEventListener("click", girarRuleta);
+    dibujarRuleta();
+});
+
+document.getElementById("btnaleat").addEventListener("click", function () {
+    window.location.href = "rouleta.html";
+});
+
+document.getElementById("btnVolver").addEventListener("click", function () {
+    window.location.href = "index.html";
 });

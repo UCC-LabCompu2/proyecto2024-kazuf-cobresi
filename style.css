@@ -134,6 +134,8 @@ body {
     height: 60px;
 }
 
+
+
 /* Imagen dentro del botón */
 #btnEnviar img {
     width: 100%;
@@ -141,10 +143,14 @@ body {
     transition: transform 0.3s ease;
 }
 
+
+
 /* Efecto de hover */
 #btnEnviar:hover img {
     transform: scale(1.1); /* Hace un pequeño zoom al pasar el mouse */
 }
+
+
 
 /* Estilo refinado del botón "Volver a empezar" */
 #btnVolver {
@@ -161,6 +167,23 @@ body {
     align-items: center;
     justify-content: center;
     margin: 15px auto; /* Centrado */
+    width: fit-content;
+}
+
+#btnaleat {
+    background-color: #a59580; /* Beige aesthetic */
+    color: #4A3628; /* Texto marrón oscuro */
+    font-size: 16px; /* Reducido para un diseño más delicado */
+    font-weight: bold;
+    padding: 8px 18px; /* Espaciado más sutil */
+    border: 1.5px solid rgba(50, 42, 30, 0.84); /* Borde más delgado */
+    border-radius: 20px; /* Bordes redondeados pero más delicados */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1px auto; /* Centrado */
     width: fit-content;
 }
 
@@ -368,6 +391,7 @@ footer {
         height: 90px;
     }
 
+
     /* Ajuste del botón de volver */
     #btnVolver, #btnVolverInfo {
         font-size: 22px;
@@ -426,5 +450,104 @@ footer {
         background-color: #D2B48C;
         padding: 22px;
         border-radius: 14px;
+    }
+}
+
+
+
+
+
+
+
+/* Contenedor de la ruleta */
+.ruleta-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 65vh; /* Ajusta la altura para que encaje bien */
+    margin-top: 5vh;
+}
+
+/* Señalador de la ruleta */
+.señalador {
+    position: absolute;
+    top: -25px; /* Ajustado para que apunte bien */
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 30px solid black; /* Negro */
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+/* Canvas (Ruleta) */
+#ruletaCanvas {
+    display: block;
+    border-radius: 50%;
+    border: 4px solid #8B5E3B;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de girar */
+#girarRuleta {
+    display: block;
+    margin: 1.5vh auto; /* Reducido un poco el margen */
+    padding: 6px 16px; /* Tamaño más pequeño */
+    font-size: 14px; /* Texto más pequeño */
+    background-color: #8B5E3B;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px; /* Bordes más pequeños */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#girarRuleta:hover {
+    background-color: #5C3A1D;
+    transform: scale(1.05);
+}
+
+/* Resultado */
+#resultadoCafeteria {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4A3628;
+    margin-top: 1vh;
+}
+
+/* Ajustes para que todo se vea bien en pantallas grandes */
+@media screen and (min-width: 1024px) {
+    .ruleta-container {
+        height: 55vh;
+    }
+
+    #girarRuleta {
+        font-size: 20px;
+        padding: 12px 30px;
+    }
+
+    #resultadoCafeteria {
+        font-size: 22px;
+    }
+}
+
+/* Ajustes para móviles */
+@media screen and (max-width: 768px) {
+    .ruleta-container {
+        height: 60vh;
+    }
+
+    #girarRuleta {
+        font-size: 18px;
+        padding: 10px 24px;
+    }
+
+    #resultadoCafeteria {
+        font-size: 18px;
     }
 }
