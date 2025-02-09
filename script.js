@@ -331,8 +331,12 @@ function volverDesdeInfo() {
 }
 
 // Canvas
-document.addEventListener("DOMContentLoaded", function () {
+const initRuleta = () => {
     const canvas = document.getElementById("ruletaCanvas");
+    if (!canvas) {
+        // Si no hay canvas en la página, no seguimos
+        return;
+    }
     const ctx = canvas.getContext("2d");
     const btnGirar = document.getElementById("girarRuleta");
     const resultadoTexto = document.getElementById("resultadoCafeteria");
@@ -352,10 +356,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let anguloActual = 0;
     let girando = false;
-    const cantidad = 28; // 🎡 28 espacios en la ruleta
+    const cantidad = 28; // 28 espacios en la ruleta
     const anguloSeccion = (Math.PI * 2) / cantidad;
 
-    function dibujarRuleta() {
+    // Función para dibujar la ruleta
+    const dibujarRuleta = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         for (let i = 0; i < cantidad; i++) {
@@ -379,18 +384,20 @@ document.addEventListener("DOMContentLoaded", function () {
             ctx.fillText(cafeterias[i], 100, 4);
             ctx.restore();
         }
-    }
+    };
 
-    function girarRuleta() {
+    // Función para girar la ruleta
+    const girarRuleta = () => {
         if (girando) return;
         girando = true;
 
         let velocidad = Math.random() * 10 + 20;
         let desaceleracion = 0.98;
         let girosExtra = Math.random() * 4 + 2;
+        // Nota: anguloFinal no es indispensable aquí, pero lo mantenemos por claridad:
         let anguloFinal = anguloActual + (Math.PI * 2 * girosExtra);
 
-        function animarGiro() {
+        const animarGiro = () => {
             anguloActual += velocidad * 0.01;
             velocidad *= desaceleracion;
 
@@ -402,12 +409,13 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             dibujarRuleta();
-        }
+        };
 
         animarGiro();
-    }
+    };
 
-    function mostrarResultado() {
+    // Función para mostrar el resultado
+    const mostrarResultado = () => {
         // Determinar el sector donde cayó el señalador
         let indiceSeleccionado = Math.floor((Math.PI * 1.5 - anguloActual) / anguloSeccion) % cantidad;
         if (indiceSeleccionado < 0) {
@@ -416,11 +424,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let cafeteriaSeleccionada = cafeterias[indiceSeleccionado];
         resultadoTexto.innerText = `☕ ¡Visita ${cafeteriaSeleccionada}!`;
-    }
+    };
 
-    btnGirar.addEventListener("click", girarRuleta);
+    btnGirar.onclick = girarRuleta;
+
+    // Por último, dibujar la ruleta al cargar
     dibujarRuleta();
-});
+};
+
+// Llamada directa para inicializar la ruleta
+initRuleta();
 
 // Boton para la rouleta aleatoria
 function irAleatorio() {
