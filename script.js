@@ -231,31 +231,26 @@ const cafeterias = [
 ];
 
 //  Detectar en qué página estamos
-document.addEventListener("DOMContentLoaded", function () {
-    let btnEnviar = document.getElementById("btnEnviar");
+function enviarDatosCafeteria() {
+    let zona = document.getElementById("zona").value;
+    let ambiente = document.getElementById("ambiente").value;
+    let preferencia = document.getElementById("preferencia").value;
 
-    if (btnEnviar) {
-        btnEnviar.addEventListener("click", function (event) { //  Capturamos el evento para evitar redirección
-            let zona = document.getElementById("zona").value;
-            let ambiente = document.getElementById("ambiente").value;
-            let preferencia = document.getElementById("preferencia").value;
-
-            // Verificar si alguna opción sigue sin seleccionarse
-            if (zona === "OpcionZona" || ambiente === "OpcionAmbiente" || preferencia === "OpcionPreferencia") {
-                alert("⚠️ Debes seleccionar una opción en todas las categorías antes de continuar.");
-                return; //  Detiene la ejecución para que NO redirija
-            }
-
-            // Si todas las opciones están completas, guardamos en localStorage y redirigimos
-            localStorage.setItem("zona", zona);
-            localStorage.setItem("ambiente", ambiente);
-            localStorage.setItem("preferencia", preferencia);
-
-            console.log(" Redirigiendo a Resultados.html...");
-            window.location.href = "resultados.html";
-        });
+    // Verificar si alguna opción sigue sin seleccionarse
+    if (zona === "OpcionZona" || ambiente === "OpcionAmbiente" || preferencia === "OpcionPreferencia") {
+        alert("⚠️ Debes seleccionar una opción en todas las categorías antes de continuar.");
+        return; // Detiene la ejecución
     }
-});
+
+    // Guardamos en localStorage y redirigimos
+    localStorage.setItem("zona", zona);
+    localStorage.setItem("ambiente", ambiente);
+    localStorage.setItem("preferencia", preferencia);
+
+    console.log("Redirigiendo a Resultados.html...");
+    window.location.href = "resultados.html";
+}
+
 
 // Si estamos en `resultados.html`, mostramos las cafeterías filtradas
 if (document.getElementById("cafeterias")) {
@@ -317,43 +312,25 @@ if (document.getElementById("cafeterias")) {
 }
 
 // Botón para volver a `index.html`
-document.addEventListener("DOMContentLoaded", function () {
-    let btnVolver = document.getElementById("btnVolver");
+function volverAlInicio() {
+    console.log("Redirigiendo a index.html...");
+    window.location.href = "index.html";
+}
 
-    if (btnVolver) {
-        btnVolver.addEventListener("click", function () {
-            console.log(" Redirigiendo a index.html...");
-            window.location.href = "index.html"; // Redirige a la página de inicio
-        });
-    }
-});
 
 // Botón para empezar el cuestionario
-document.addEventListener("DOMContentLoaded", function () {
-    let btnStart = document.getElementById("btnStart");
+function iniciarCuestionario() {
+    console.log("Redirigiendo a cuestionario.html...");
+    window.location.href = "cuestionario.html";
+}
 
-    if (btnStart) {
-        btnStart.addEventListener("click", function () {
-            console.log("Redirigiendo a cuestionario.html...");
-            window.location.href = "cuestionario.html";
-        });
-    }
-});
 
 // Botón para volver a información
-document.addEventListener("DOMContentLoaded", function () {
-    let btnVolverInfo = document.getElementById("btnVolverInfo");
+function volverDesdeInfo() {
+    window.location.href = "index.html";
+}
 
-    if (btnVolverInfo) {
-        btnVolverInfo.addEventListener("click", function () {
-            window.location.href = "index.html";
-        });
-    }
-});
-
-
-
-
+// Canvas
 document.addEventListener("DOMContentLoaded", function () {
     const canvas = document.getElementById("ruletaCanvas");
     const ctx = canvas.getContext("2d");
@@ -445,10 +422,8 @@ document.addEventListener("DOMContentLoaded", function () {
     dibujarRuleta();
 });
 
-document.getElementById("btnaleat").addEventListener("click", function () {
+// Boton para la rouleta aleatoria
+function irAleatorio() {
     window.location.href = "rouleta.html";
-});
+}
 
-document.getElementById("btnVolver").addEventListener("click", function () {
-    window.location.href = "index.html";
-});

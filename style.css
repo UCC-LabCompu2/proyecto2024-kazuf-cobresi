@@ -1,22 +1,22 @@
 #titulo_principal {
-    text-align: center; /* Centrar el texto */
-    display: block; /* Evitar que estén en la misma línea */
+    text-align: center;
+    display: block;
 }
 
 /* "Café" con fuente Anaktoria */
 .titulo-cafe {
-    font-family: 'Anaktoria', sans-serif !important;
+    font-family: 'Anaktoria', sans-serif;
     font-size: 60px;
     font-weight: normal;
-    display: block; /* Hace que "Café" quede arriba */
+    display: block;
 }
 
 /* "Córdoba" con fuente Cardo */
 .titulo-cordoba {
-    font-family: "Cardo", serif !important;
+    font-family: "Cardo", serif;
     font-size: 20px;
     font-weight: 700;
-    display: block; /* Hace que "Córdoba" quede abajo */
+    display: block;
 }
 
 
@@ -24,19 +24,19 @@
 #cafeterias {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente */
-    justify-content: center; /* Centra el contenido verticalmente (si es necesario) */
-    margin-top: 20px; /* Espaciado superior */
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 /* Contenedor de cada cafetería */
 .cafe-item {
     display: flex;
     align-items: center;
-    gap: 15px; /* Espacio entre la imagen y el texto */
-    margin-bottom: 15px; /* Espacio entre cada cafetería */
+    gap: 15px;
+    margin-bottom: 15px;
     padding: 10px;
-    width: fit-content; /* Ajusta el ancho al contenido */
+    width: fit-content;
 }
 
 /* Imagen de la cafetería */
@@ -73,11 +73,11 @@
 
 /* Fondo para todas las páginas */
 body {
-    background-image: url('imagenes/Fondo_CafeCordoba.png'); /* Ruta de la imagen */
-    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que se repita */
-    background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
+    background-image: url('imagenes/Fondo_CafeCordoba.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* Estilo para centrar todo en la página */
@@ -85,12 +85,12 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 100vh; /* Ocupa toda la pantalla */
+    height: 100vh;
 }
 
 /* Estilo del contenedor del formulario */
 .contenedor-formulario {
-    background-color: rgba(181, 153, 120, 0.8); /* Color beige con transparencia */
+    background-color: rgba(181, 153, 120, 0.8);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -105,7 +105,7 @@ body {
     font-size: 18px;
     font-weight: bold;
     margin-top: 10px;
-    color: #4A3628; /* Marrón oscuro */
+    color: #4A3628;
 }
 
 /* Estilos de los selectores */
@@ -130,7 +130,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px; /* Ajusta el tamaño según lo necesites */
+    width: 60px;
     height: 60px;
 }
 
@@ -147,51 +147,51 @@ body {
 
 /* Efecto de hover */
 #btnEnviar:hover img {
-    transform: scale(1.1); /* Hace un pequeño zoom al pasar el mouse */
+    transform: scale(1.1);
 }
 
 
 
 /* Estilo refinado del botón "Volver a empezar" */
 #btnVolver {
-    background-color: #D2B48C; /* Beige aesthetic */
-    color: #4A3628; /* Texto marrón oscuro */
-    font-size: 16px; /* Reducido para un diseño más delicado */
+    background-color: #D2B48C;
+    color: #4A3628;
+    font-size: 16px;
     font-weight: bold;
-    padding: 8px 18px; /* Espaciado más sutil */
-    border: 1.5px solid #8B5E3B; /* Borde más delgado */
-    border-radius: 20px; /* Bordes redondeados pero más delicados */
+    padding: 8px 18px;
+    border: 1.5px solid #8B5E3B;
+    border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 15px auto; /* Centrado */
+    margin: 15px auto;
     width: fit-content;
 }
 
 #btnaleat {
-    background-color: #a59580; /* Beige aesthetic */
-    color: #4A3628; /* Texto marrón oscuro */
-    font-size: 16px; /* Reducido para un diseño más delicado */
+    background-color: #a59580;
+    color: #4A3628;
+    font-size: 16px;
     font-weight: bold;
-    padding: 8px 18px; /* Espaciado más sutil */
-    border: 1.5px solid rgba(50, 42, 30, 0.84); /* Borde más delgado */
-    border-radius: 20px; /* Bordes redondeados pero más delicados */
+    padding: 8px 18px;
+    border: 1.5px solid rgba(50, 42, 30, 0.84);
+    border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1px auto; /* Centrado */
+    margin: 1px auto;
     width: fit-content;
 }
 
 /* Efecto al pasar el mouse */
 #btnVolver:hover {
-    background-color: #8B5E3B; /* Marrón más oscuro */
+    background-color: #8B5E3B;
     color: white;
-    transform: scale(1.05); /* Efecto de crecimiento sutil */
+    transform: scale(1.05);
 }
 
 /* Contenedor principal centrado */
@@ -200,7 +200,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Ocupar toda la pantalla */
+    height: 100vh;
     text-align: center;
 }
 
@@ -209,60 +209,60 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px; /* Espacio entre el título y el botón */
+    margin-bottom: 20px;
 }
 
 /* "Café" con fuente elegante */
 .titulo-cafe {
     font-family: 'Anaktoria', sans-serif;
-    font-size: 70px; /* Tamaño más grande */
+    font-size: 70px;
     font-weight: normal;
 }
 
 /* "Córdoba" con fuente refinada */
 .titulo-cordoba {
     font-family: "Cardo", serif;
-    font-size: 24px; /* Más pequeño y delicado */
+    font-size: 24px;
     font-weight: 700;
-    letter-spacing: 2px; /* Espaciado para más elegancia */
+    letter-spacing: 2px;
 }
 
 /* Estilo refinado del botón "START" */
 #btnStart {
-    background-color: #5C3A1D; /* Marrón oscuro aesthetic */
+    background-color: #5C3A1D;
     color: white;
     font-size: 16px;
     font-weight: bold;
     padding: 10px 32px;
     border: none;
-    border-radius: 25px; /* Bordes bien redondeados */
+    border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    letter-spacing: 2px; /* Espaciado entre letras */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    letter-spacing: 2px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Efecto al pasar el mouse */
 #btnStart:hover {
-    background-color: #8B5E3B; /* Marrón más claro */
-    transform: scale(1.05); /* Efecto de crecimiento sutil */
+    background-color: #8B5E3B;
+    transform: scale(1.05);
 }
 
 /* Estilizar el footer */
 footer {
     position: absolute;
-    bottom: 10px; /* Espaciado desde abajo */
+    bottom: 10px;
     width: 100%;
     text-align: center;
     font-size: 14px;
-    color: #4A3628; /* Marrón oscuro */
+    color: #4A3628;
 }
 
 /* Estilo del footer */
 footer {
     position: absolute;
-    bottom: 20px; /* Subimos el footer para que sea visible sin scroll */
+    bottom: 20px;
     width: 100%;
     text-align: center;
 }
@@ -271,7 +271,7 @@ footer {
 #link-quienes {
     display: block;
     font-size: 16px;
-    color: #8B5E3B; /* Marrón aesthetic */
+    color: #8B5E3B;
     text-decoration: none;
     font-weight: bold;
     margin-bottom: 5px;
@@ -280,25 +280,25 @@ footer {
 
 /* Efecto hover */
 #link-quienes:hover {
-    color: #5C3A1D; /* Marrón más oscuro al pasar el mouse */
+    color: #5C3A1D;
 }
 
 /* Estilo del texto de derechos reservados */
 #texto-footer {
     font-size: 12px;
-    color: #4A3628; /* Marrón oscuro */
+    color: #4A3628;
     margin-top: 5px;
 }
 
 /* Estilo del botón "Volver" */
 #btnVolverInfo {
-    background-color: #D2B48C; /* Beige aesthetic */
-    color: #4A3628; /* Marrón oscuro */
-    font-size: 14px; /* Tamaño más pequeño */
+    background-color: #D2B48C;
+    color: #4A3628;
+    font-size: 14px;
     font-weight: bold;
     padding: 6px 16px;
     border: 1.5px solid #8B5E3B;
-    border-radius: 15px; /* Bordes más suaves */
+    border-radius: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
@@ -329,14 +329,14 @@ footer {
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -1; /* Envía el canvas al fondo */
-    pointer-events: none; /* Evita que interfiera con los clics */
-    background-color: transparent; /* Asegura que el fondo sea transparente */
+    z-index: -1;
+    pointer-events: none;
+    background-color: transparent;
 }
 
-/* ======================== */
-/* 📱 Estilos para móviles y ajustes */
-/* ======================== */
+
+/*  Estilos para móviles y ajustes */
+
 @media screen and (max-width: 768px) {
 
     /* Ajuste del título en móviles */
@@ -466,20 +466,20 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 65vh; /* Ajusta la altura para que encaje bien */
+    height: 65vh;
     margin-top: 5vh;
 }
 
 /* Señalador de la ruleta */
 .señalador {
     position: absolute;
-    top: -25px; /* Ajustado para que apunte bien */
+    top: -25px;
     left: 50%;
     width: 0;
     height: 0;
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
-    border-top: 30px solid black; /* Negro */
+    border-top: 30px solid black;
     transform: translateX(-50%);
     z-index: 10;
 }
@@ -495,13 +495,13 @@ footer {
 /* Botón de girar */
 #girarRuleta {
     display: block;
-    margin: 1.5vh auto; /* Reducido un poco el margen */
-    padding: 6px 16px; /* Tamaño más pequeño */
-    font-size: 14px; /* Texto más pequeño */
+    margin: 1.5vh auto;
+    padding: 6px 16px;
+    font-size: 14px;
     background-color: #8B5E3B;
     color: #ffffff;
     border: none;
-    border-radius: 8px; /* Bordes más pequeños */
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
