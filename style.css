@@ -80,7 +80,7 @@ body {
     background-attachment: fixed;
 }
 
-/* Estilo para centrar todo en la página */
+/* Estilo para centrar*/
 .contenedor-principal {
     display: flex;
     justify-content: space-evenly;
@@ -135,7 +135,6 @@ body {
 }
 
 
-
 /* Imagen dentro del botón */
 #btnEnviar img {
     width: 100%;
@@ -144,12 +143,10 @@ body {
 }
 
 
-
 /* Efecto de hover */
 #btnEnviar:hover img {
     transform: scale(1.1);
 }
-
 
 
 /* Estilo refinado del botón "Volver a empezar" */
@@ -159,7 +156,7 @@ body {
     font-size: 16px;
     font-weight: bold;
     padding: 8px 18px;
-    border: 1.5px solid #8B5E3B;
+    border: 2px solid #8B5E3B;
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -176,7 +173,7 @@ body {
     font-size: 16px;
     font-weight: bold;
     padding: 8px 18px;
-    border: 1.5px solid rgba(50, 42, 30, 0.84);
+    border: 2px solid rgba(50, 42, 30, 0.84);
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -240,7 +237,7 @@ body {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 2px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Efecto al pasar el mouse */
@@ -297,13 +294,13 @@ footer {
     font-size: 14px;
     font-weight: bold;
     padding: 6px 16px;
-    border: 1.5px solid #8B5E3B;
+    border: 2px solid #8B5E3B;
     border-radius: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.15);
     display: inline-block;
     margin-bottom: 5px;
 }
@@ -454,11 +451,6 @@ footer {
 }
 
 
-
-
-
-
-
 /* Contenedor de la ruleta */
 .ruleta-container {
     position: relative;
@@ -489,7 +481,7 @@ footer {
     display: block;
     border-radius: 50%;
     border: 4px solid #8B5E3B;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Botón de girar */
@@ -520,7 +512,7 @@ footer {
     margin-top: 1vh;
 }
 
-/* Ajustes para que todo se vea bien en pantallas grandes */
+/* Ajustes para que se vea bien en pantallas grandes */
 @media screen and (min-width: 1024px) {
     .ruleta-container {
         height: 55vh;

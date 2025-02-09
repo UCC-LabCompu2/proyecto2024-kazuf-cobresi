@@ -247,7 +247,7 @@ function enviarDatosCafeteria() {
     localStorage.setItem("ambiente", ambiente);
     localStorage.setItem("preferencia", preferencia);
 
-    console.log("Redirigiendo a Resultados.html...");
+    console.log("Redirigiendo a resultados.html...");
     window.location.href = "resultados.html";
 }
 
@@ -393,9 +393,6 @@ const initRuleta = () => {
 
         let velocidad = Math.random() * 10 + 20;
         let desaceleracion = 0.98;
-        let girosExtra = Math.random() * 4 + 2;
-        // Nota: anguloFinal no es indispensable aquí, pero lo mantenemos por claridad:
-        let anguloFinal = anguloActual + (Math.PI * 2 * girosExtra);
 
         const animarGiro = () => {
             anguloActual += velocidad * 0.01;
@@ -423,7 +420,7 @@ const initRuleta = () => {
         }
 
         let cafeteriaSeleccionada = cafeterias[indiceSeleccionado];
-        resultadoTexto.innerText = `☕ ¡Visita ${cafeteriaSeleccionada}!`;
+        resultadoTexto.innerText = `☕︎ ¡Visita ${cafeteriaSeleccionada}!`;
     };
 
     btnGirar.onclick = girarRuleta;
