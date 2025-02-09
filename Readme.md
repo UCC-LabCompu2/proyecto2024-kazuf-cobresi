@@ -1,89 +1,123 @@
-**Cafe cordoba**
+# README - Proyecto "Café Córdoba"
 
-*Autores:*
+## Descripción del Proyecto
 
-Cobresi Alesio 2307105
+"Café Córdoba" es una plataforma diseñada para ayudar a los amantes del café a encontrar la cafetería ideal en la ciudad de Córdoba, Argentina. Mediante un cuestionario interactivo y una ruleta aleatoria, los usuarios pueden recibir recomendaciones personalizadas de cafeterías según sus preferencias.
 
-Kazuf María Constanza 2306594
+---
+## Estructura del Proyecto
 
-https://github.com/UCC-LabCompu2/proyecto2024-kazuf-cobresi.git
+Link of GitHubPages: https://ucc-labcompu2.github.io/proyecto2024-kazuf-cobresi/
+
+El proyecto está compuesto por las siguientes páginas HTML:
+
+### 1. **index.html** (Página de inicio)
+- **Enlaces:**
+    - `info.html` (Sobre Nosotros)
+- **Elementos:**
+    - Botón `START` que inicia el cuestionario.
+    - Footer con información de derechos de autor.
+
+**Descripción:**
+Es la pantalla de bienvenida donde los usuarios pueden comenzar su experiencia interactiva con el sitio web.
+
+---
+### 2. **info.html** (Información del proyecto)
+- **Enlaces:**
+    - Botón `Volver` (Regresa a la página anterior).
+- **Elementos:**
+    - Sección "Sobre Nosotros" con información del equipo y el propósito del proyecto.
+
+**Descripción:**
+Aquí se detalla el objetivo del proyecto, la inspiración detrás de "Café Córdoba" y su funcionalidad.
+
+---
+### 3. **cuestionario.html** (Formulario de preferencias)
+- **Enlaces:**
+    - `imagenes/botton_siguiente.png` (Botón de envío de formulario).
+    - `script.js` (Funcionalidad del cuestionario).
+- **Elementos:**
+    - Selección de `zona`, `ambiente` y `preferencia` de cafeterías.
+    - Botón `¡Aleatorio!` para una recomendación aleatoria.
+
+**Descripción:**
+Permite a los usuarios seleccionar criterios específicos para recibir sugerencias de cafeterías personalizadas.
+
+---
+### 4. **rouleta.html** (Ruleta de cafeterías)
+- **Enlaces:**
+    - `script.js` (Manejo de la ruleta interactiva).
+- **Elementos:**
+    - Ruleta interactiva para seleccionar aleatoriamente una cafetería.
+    - Botón `𖣘 Girar` para iniciar la ruleta.
+    - Botón `Volver a empezar` para regresar a la pantalla inicial.
+
+**Descripción:**
+Brinda a los usuarios una forma divertida de elegir una cafetería de manera aleatoria.
+
+---
+### 5. **resultados.html** (Resultados de búsqueda)
+- **Enlaces:**
+    - `script.js` (Generación de resultados dinámicos).
+- **Elementos:**
+    - Sección donde se muestran las cafeterías recomendadas.
+    - Botón `Volver a empezar` para reiniciar el proceso.
+
+**Descripción:**
+Muestra las cafeterías recomendadas basadas en las respuestas del cuestionario.
+
+---
+## Tecnologías utilizadas
+- **HTML5** (Estructura del sitio)
+- **CSS3** (Estilos y diseño visual)
+- **JavaScript** (Interactividad y manejo de datos)
+- **Google Fonts** (Fuentes tipográficas Anaktoria y Cardo)
+
+---
+## Instalación y Uso
+1. Descargar todos los archivos y colocarlos en la misma carpeta.
+2. Abrir `index.html` en un navegador web.
+3. Seguir las instrucciones en pantalla para explorar el sitio.
+
+---
+## Tabla de Cafeterías (Base de Datos)
+
+| Cafetería | Zona | Ambiente | Prioridad | Instagram |
+|-----------|------|----------|------------|------------|
+| Standard 69 | Nueva Córdoba | Tranquilo | Comida | [Instagram](https://www.instagram.com/standard_69) |
+| Pauza | Nueva Córdoba | Tranquilo | Café | [Instagram](https://www.instagram.com/pauzaok) |
+| Verasens | Nueva Córdoba | Vibrante | Comida | [Instagram](https://www.instagram.com/verasenshelados) |
+| Selah | Nueva Córdoba | Familiar | Café | [Instagram](https://www.instagram.com/selahrefugiodecafe) |
+| Fulano | Nueva Córdoba | Vibrante | Café | [Instagram](https://www.instagram.com/fulanocafe) |
+| Café de Barrio | Nueva Córdoba | Tranquilo | Café | [Instagram](https://www.instagram.com/cafedebarriook) |
+| Un Café | Nueva Córdoba | Tranquilo | Café | [Instagram](https://www.instagram.com/uncafe.ok) |
+| Mousse | Nueva Córdoba | Familiar | Comida | [Instagram](https://www.instagram.com/mousseok) |
+| La Cupke | Nueva Córdoba | Vibrante | Comida | [Instagram](https://www.instagram.com/lacapke) |
+| Leroma | Nueva Córdoba | Tranquilo | Café | [Instagram](https://www.instagram.com/leroma.ok) |
+| Anónimo | Zona Norte | Familiar | Café | [Instagram](https://www.instagram.com/anonimowineclub) |
+| Umami | Zona Norte | Familiar | Comida | [Instagram](https://www.instagram.com/umamicasadecafe) |
+| Casa Chacana | Zona Norte | Vibrante | Café | [Instagram](https://www.instagram.com/casachacana) |
+| Cardamomo | Zona Norte | Vibrante | Comida | [Instagram](https://www.instagram.com/cardamomo.panaderiaycafe) |
+| María Antonieta | Zona Norte | Vibrante | Comida | [Instagram](https://www.instagram.com/mariaantonieta_universodeli) |
+| Rue Cannelle | Zona Norte | Vibrante | Comida | [Instagram](https://www.instagram.com/rue.cannelle) |
+| Oreste | Zona Norte | Tranquilo | Comida | [Instagram](https://www.instagram.com/oresteurca) |
+| Mercé | Zona Norte | Tranquilo | Comida | [Instagram](https://www.instagram.com/merce.tejeda) |
+| Renato | Zona Norte | Tranquilo | Café | [Instagram](https://www.instagram.com/renatocafe1928) |
+| Nonna Nera | Centro | Tranquilo | Café | [Instagram](https://www.instagram.com/nonna.nera) |
+| Giuseppe | Centro | Vibrante | Comida | [Instagram](https://www.instagram.com/giuseppebarcba) |
+| El Papagayo | Centro | Tranquilo | Café | [Instagram](https://www.instagram.com/elpapagayopetit) |
+| Eliseo | Centro | Familiar | Café | [Instagram](https://www.instagram.com/eliseo.cafe) |
+| Néctar | Centro | Tranquilo | Café | [Instagram](https://www.instagram.com/nectar.cba) |
+| Mármol | Centro | Vibrante | Comida | [Instagram](https://www.instagram.com/marmolsiglo17) |
+| El Tazón | Centro | Familiar | Comida | [Instagram](https://www.instagram.com/eltazon.cafeteria) |
+| Le Dureau | Centro | Vibrante | Café | [Instagram](https://www.instagram.com/ledureaucafe) |
+| Morfeta | Centro | Tranquilo | Comida | [Instagram](https://www.instagram.com/morfeta.morfeta) |
 
 
-**Nuestro sitio web está diseñado para ofrecerte recomendaciones personalizadas de cafeterías y series de café en tu área, basadas en tus preferencias y gustos personales. Utilizando un algoritmo avanzado, analizamos tus elecciones y sugerimos lugares que se adaptan perfectamente a tus intereses. Ya sea que busques un café acogedor para trabajar, un lugar elegante o simplemente un nuevo sabor para probar, nuestra plataforma te guiará hacia las mejores opciones disponibles en tu zona.**
 
+---
+## Autores
+Este proyecto fue desarrollado por Kasuf Constanza **2306594** y Cobresi Alesio **2307105**.
 
-(Al no utilizar titulos,separamos la seleccion por nombre de archivo (.html))
-
- **1)_Index.html**
-
-*Links:* (https://fonts.googleapis.com,
-https://fonts.gstatic.com,
-https://fonts.googleapis.com/css2?family=Cantata+One&display=swap,
-http://localhost:63343/proyecto2024-kazuf-cobresi/Ubicaciones.html)
-
-*Items:* -
-
-*Tablas:* -
-
-*Index:* -
-
-   **2)_Ubicacionbes.html**
-
-*Links:* (http://localhost:63343/proyecto2024-kazuf-cobresi/Preferencias.html,
-http://www.w3.org/2000/svg)
-
-*Items:* -
-
-*Tablas:* -
-
-*Index:* -
-
-   **3)_Preferencias.html**
-
-*Links*: (https://fonts.googleapis.com,
-https://fonts.gstatic.com,
-https://fonts.googleapis.com/css2?family=Cantata+One&display=swap,
-http://localhost:63343/proyecto2024-kazuf-cobresi/Resultados.html)
-
-*Items:* -
-
-*Tablas:(Para la comprencion de la logica,aqui se presenta una tabla donde especifica las preferencias de cada cafeteria.* -
-
-| Cafeterías | Vegetariano | Vegano | Sin TACC | Salón | Take Away | Pet Friendly | Ubicación   |
-|------------|-------------|--------|----------|-------|-----------|--------------|-------------|
-| LaCupke    | ✅          | ❌     | ✅       | ✅    | ❌        | ✅            | Güemes      |
-| UnCafe     | ❌          | ❌     | ✅       | ✅    | ✅        | ✅            | Güemes      |
-| Selah      | ✅          | ✅     | ✅       | ✅    | ❌        | ✅            | General Paz |
-| Marmol     | ✅          | ✅     | ✅       | ✅    | ❌        | ❌            | General Paz |
-| Fulano     | ✅          | ❌     | ✅       | ✅    | ✅        | ✅            | Nueva C.    |
-| LeRoma     | ✅          | ❌     | ❌       | ✅    | ✅        | ❌            | Nueva C.    |
-
-
-
-
-*Index:* -
-
-   **4)_Resultados.html**
-*Links:*(http://www.w3.org/2000/svg,
-https://www.instagram.com/lacapke?igsh=NGlhajJsMHFuYjFx,
-https://linktr.ee/LaCapke.Quiero?fbclid=PAZXh0bgNhZW0CMTEAAabCu81Zi_PAxxGq1b6bacBK6hSRXKLEDokeikUIOuSvVAZnEIWPBDRMQ-Y_aem_AXanMiaiWazSpzx35BH1pqKyTgGA-C697wKtDBGWtEt0r1Zw4bawFa5INr0NgcseUnJgu611NzXA6XEb9ATsagxG,
-https://www.instagram.com/marmolsiglo17?igsh=ZDY4N2dmZndwenZ0,
-https://marmolsiglo17.com/?fbclid=PAZXh0bgNhZW0CMTEAAaYxbU-b4IHidrQbDLT7BNJSLTp0Q1dliTdLJ-E2epte3Id8R2-80X85jao_aem_AXaDo9RX38PpORDLVMWrGmd5WHTD0XsvACEymlo6vq8wvpP-e4NnZNXJLVzEgwV3S3wfq2ZM6DLF4sUR5Z-EblBP,
-https://www.instagram.com/leroma.ok?igsh=Zjc1aDRiZWgzM2Vr,
-https://leroma.pedix.app/sucursales,
-https://www.instagram.com/fulanocafe?igsh=MTdxOGljM202ODBtbQ==,
-https://linktr.ee/fulanocafe,
-https://www.instagram.com/selahrefugiodecafe?igsh=MTRtcWljeGhwamFmNA==,
-https://drive.google.com/file/d/1ygq3TMBbkbN1D1xglVIND04okp8pjMDu/view?fbclid=PAZXh0bgNhZW0CMTEAAaYVPYe8dZzHlTyYo_PRKw4CSYDlROPjoW2jHIP2uUprLA2Q8WgdTKZWxtA_aem_AXaGswL1NgMAGyiSxCg-R5iZVLnkXP1h9RHJlXdvyDbFVMa5cLt8j_nlLrRtuOBkSFPguDQzvuocfjcPXriyF2LX,
-https://www.instagram.com/uncafe.ok?igsh=MTdldXdvNmg1MnB0aw==)
-
-*Items:* -
-
-*Tablas:* -
-
-*Index:* -
-
-
------------
-Canvas no es requerido para nuestro sitio web.
-----------------
+---
+**© 2025 Cafés de Córdoba. Todos los derechos reservados.**
