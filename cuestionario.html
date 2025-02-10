@@ -5,6 +5,9 @@
     <title>Café Córdoba</title>
     <link rel="shortcut icon" href="imagenes/Granito_de_cafe.png">
     <link rel="stylesheet" href="style.css">
+    <meta content="Cobresi_Alesio_y_Constanza_Kazuf" name="author">
+    <meta content="Cafe, Cafeteria, Cordoba, Comida, Desayuno, Merienda" name="keywords">
+    <meta content="Página que recomienda cafés en Córdoba segun tus preferencias" name="description">
 
 
     <!-- Fuente "Anaktoria" para "Café" -->
@@ -15,49 +18,55 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
+
 <body>
 <canvas id="backgroundCanvas"></canvas>
 
 <div class="contenedor-principal">
-
+    <header>
     <h1 id="titulo_principal">
         <span class="titulo-cafe">Café</span>
         <span class="titulo-cordoba">Córdoba</span>
     </h1>
+    </header>
+
 
     <div class="contenedor-formulario">
-        <label for="zona">Zona</label>
-        <select name="zona" id="zona">
-            <option value="OpcionZona">Opciones</option>
-            <option value="znorte">Zona Norte</option>
-            <option value="zcentro">Zona Centro</option>
-            <option value="nva_cba">Nueva Córdoba</option>
-        </select>
+        <form id="formulario">
+            <label for="zona">Zona</label>
+            <select name="zona" id="zona">
+                <option value="OpcionZona">Opciones</option>
+                <option value="znorte">Zona Norte</option>
+                <option value="zcentro">Zona Centro</option>
+                <option value="nva_cba">Nueva Córdoba</option>
+            </select>
 
-        <label for="ambiente">Ambiente</label>
-        <select name="ambiente" id="ambiente">
-            <option value="OpcionAmbiente">Opciones</option>
-            <option value="tranquilo">Tranquilo</option>
-            <option value="vibrante">Vibrante</option>
-            <option value="familiar">Familiar</option>
-            <option value="sin_ambiente">Sin preferencia</option>
-        </select>
+            <label for="ambiente">Ambiente</label>
+            <select name="ambiente" id="ambiente">
+                <option value="OpcionAmbiente">Opciones</option>
+                <option value="tranquilo">Tranquilo</option>
+                <option value="vibrante">Vibrante</option>
+                <option value="familiar">Familiar</option>
+                <option value="sin_ambiente">Sin preferencia</option>
+            </select>
 
-        <label for="preferencia">Preferencia</label>
-        <select name="preferencia" id="preferencia">
-            <option value="OpcionPreferencia">Opciones</option>
-            <option value="cafe">Café</option>
-            <option value="comida">Comida</option>
-            <option value="sin_preferencia">Sin preferencia</option>
-        </select>
+            <label for="preferencia">Preferencia</label>
+            <select name="preferencia" id="preferencia">
+                <option value="OpcionPreferencia">Opciones</option>
+                <option value="cafe">Café</option>
+                <option value="comida">Comida</option>
+                <option value="sin_preferencia">Sin preferencia</option>
+            </select>
 
-        <button type="button" id="btnEnviar" onclick="enviarDatosCafeteria()">
-            <img src="imagenes/botton_siguiente.png" alt="Enviar">
-        </button>
+            <button type="button" id="btnEnviar" onclick="enviarDatosCafeteria()">
+                <img src="imagenes/botton_siguiente.png" alt="Boton enviar">
+            </button>
 
-        <button id="btnaleat" onclick="irAleatorio()">¡Aleatorio!</button>
-
+            <button type="button" id="btnaleat" onclick="irAleatorio()">¡Aleatorio!</button>
+        </form>
     </div>
+
 </div>
 
 

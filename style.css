@@ -87,8 +87,7 @@ body {
     align-items: center;
     height: 100vh;
 }
-
-/* Estilo del contenedor del formulario */
+/* Mantiene el diseño del contenedor principal */
 .contenedor-formulario {
     background-color: rgba(181, 153, 120, 0.8);
     padding: 20px;
@@ -100,17 +99,28 @@ body {
     width: 300px;
 }
 
+/* Asegurar que el form no afecte el diseño del contenedor */
+.contenedor-formulario form {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* Estilos de los labels */
 .contenedor-formulario label {
     font-size: 18px;
     font-weight: bold;
     margin-top: 10px;
     color: #4A3628;
+    display: block;
 }
 
 /* Estilos de los selectores */
 .contenedor-formulario select {
-    width: 80%;
+    width: 100%;
     padding: 8px;
     border: none;
     border-radius: 8px;
@@ -120,6 +130,24 @@ body {
     text-align: center;
     cursor: pointer;
 }
+
+/* Botones */
+.contenedor-formulario button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #8B5E3B;
+    color: white;
+}
+
+.contenedor-formulario button img {
+    width: 20px;
+    height: auto;
+}
+
 
 /* Estilo del botón de enviar */
 #btnEnviar {
@@ -365,22 +393,6 @@ footer {
         margin-top: 20px;
     }
 
-    /* Ajuste del cuestionario */
-    .contenedor-formulario {
-        width: 95%;
-        padding: 30px;
-        text-align: center;
-    }
-
-    .contenedor-formulario label {
-        font-size: 22px;
-    }
-
-    .contenedor-formulario select {
-        width: 100%;
-        font-size: 20px;
-        padding: 10px;
-    }
 
     /* Ajuste del botón de enviar */
     #btnEnviar {
@@ -436,9 +448,6 @@ footer {
         order: 1;
     }
 
-    .contenedor-formulario {
-        order: 2;
-    }
 
     /* Ajustar el aviso cuando no se completan opciones */
     .alerta-opciones {
@@ -450,6 +459,10 @@ footer {
     }
 }
 
+img {
+    width: 50px;
+    height: auto;
+}
 
 /* Contenedor de la ruleta */
 .ruleta-container {

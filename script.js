@@ -230,8 +230,18 @@ const cafeterias = [
     },
 ];
 
+
 //  Detectar en qué página estamos
+/**
+ * Envía los datos de selección de la cafetería al almacenamiento local y redirige a la página de resultados.
+ * @method enviarDatosCafeteria
+ * @param {string} zona - Valor seleccionado de la zona dentro del formulario.
+ * @param {string} ambiente - Valor seleccionado del ambiente dentro del formulario.
+ * @param {string} preferencia - Valor seleccionado de la preferencia dentro del formulario.
+ * @return {void} No retorna ningún valor, solo redirige a otra página.
+ */
 function enviarDatosCafeteria() {
+    let formulario = document.getElementById("formulario");
     let zona = document.getElementById("zona").value;
     let ambiente = document.getElementById("ambiente").value;
     let preferencia = document.getElementById("preferencia").value;
@@ -239,6 +249,10 @@ function enviarDatosCafeteria() {
     // Verificar si alguna opción sigue sin seleccionarse
     if (zona === "OpcionZona" || ambiente === "OpcionAmbiente" || preferencia === "OpcionPreferencia") {
         alert("⚠️ Debes seleccionar una opción en todas las categorías antes de continuar.");
+
+
+        // Restablecer el formulario después de la advertencia
+        formulario.reset();
         return; // Detiene la ejecución
     }
 
@@ -253,6 +267,14 @@ function enviarDatosCafeteria() {
 
 
 // Si estamos en `resultados.html`, mostramos las cafeterías filtradas
+/**
+ * Filtra y muestra las cafeterías según las preferencias almacenadas en localStorage en la página `resultados.html`.
+ * @method mostrarCafeteriasFiltradas
+ * @param {string} zonaSeleccionada - Zona seleccionada por el usuario, obtenida de localStorage.
+ * @param {string} ambienteSeleccionado - Ambiente seleccionado por el usuario, obtenido de localStorage.
+ * @param {string} preferenciaSeleccionada - Preferencia seleccionada por el usuario, obtenida de localStorage.
+ * @return {void} No retorna ningún valor, solo actualiza el DOM con las cafeterías filtradas.
+ */
 if (document.getElementById("cafeterias")) {
     let zonaSeleccionada = localStorage.getItem("zona");
     let ambienteSeleccionado = localStorage.getItem("ambiente");
@@ -311,7 +333,13 @@ if (document.getElementById("cafeterias")) {
     }
 }
 
+
 // Botón para volver a `index.html`
+/**
+ * Redirige al usuario a la página de inicio (`index.html`).
+ * @method volverAlInicio
+ * @return {void} No retorna ningún valor, solo redirige a otra página.
+ */
 function volverAlInicio() {
     console.log("Redirigiendo a index.html...");
     window.location.href = "index.html";
@@ -319,6 +347,11 @@ function volverAlInicio() {
 
 
 // Botón para empezar el cuestionario
+/**
+ * Redirige al usuario a la página del cuestionario (`cuestionario.html`).
+ * @method iniciarCuestionario
+ * @return {void} No retorna ningún valor, solo redirige a otra página.
+ */
 function iniciarCuestionario() {
     console.log("Redirigiendo a cuestionario.html...");
     window.location.href = "cuestionario.html";
@@ -326,9 +359,15 @@ function iniciarCuestionario() {
 
 
 // Botón para volver a información
+/**
+ * Redirige al usuario a la página de inicio (`index.html`) desde la sección de información.
+ * @method volverDesdeInfo
+ * @return {void} No retorna ningún valor, solo redirige a otra página.
+ */
 function volverDesdeInfo() {
     window.location.href = "index.html";
 }
+
 
 // Canvas
 const initRuleta = () => {
@@ -360,6 +399,11 @@ const initRuleta = () => {
     const anguloSeccion = (Math.PI * 2) / cantidad;
 
     // Función para dibujar la ruleta
+    /**
+     * Dibuja una ruleta en un canvas con sectores representando cafeterías.
+     * @method dibujarRuleta
+     * @return {void} No retorna ningún valor, solo dibuja la ruleta en el canvas.
+     */
     const dibujarRuleta = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -387,6 +431,11 @@ const initRuleta = () => {
     };
 
     // Función para girar la ruleta
+    /**
+     * Inicia el giro de la ruleta con una desaceleración progresiva y muestra el resultado al detenerse.
+     * @method girarRuleta
+     * @return {void} No retorna ningún valor, solo anima la ruleta y muestra el resultado al finalizar.
+     */
     const girarRuleta = () => {
         if (girando) return;
         girando = true;
@@ -412,6 +461,11 @@ const initRuleta = () => {
     };
 
     // Función para mostrar el resultado
+    /**
+     * Determina la cafetería seleccionada por la ruleta y la muestra en el resultado.
+     * @method mostrarResultado
+     * @return {void} No retorna ningún valor, solo actualiza el texto con la cafetería seleccionada.
+     */
     const mostrarResultado = () => {
         // Determinar el sector donde cayó el señalador
         let indiceSeleccionado = Math.floor((Math.PI * 1.5 - anguloActual) / anguloSeccion) % cantidad;
@@ -429,11 +483,17 @@ const initRuleta = () => {
     dibujarRuleta();
 };
 
+
 // Llamada directa para inicializar la ruleta
 initRuleta();
 
+
 // Boton para la rouleta aleatoria
+/**
+ * Redirige al usuario a la página de la ruleta aleatoria (`rouleta.html`).
+ * @method irAleatorio
+ * @return {void} No retorna ningún valor, solo redirige a otra página.
+ */
 function irAleatorio() {
     window.location.href = "rouleta.html";
 }
-
