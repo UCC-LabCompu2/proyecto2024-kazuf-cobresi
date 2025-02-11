@@ -240,16 +240,15 @@ const cafeterias = [
  * @param {string} preferencia - Valor seleccionado de la preferencia dentro del formulario.
  * @return {void} No retorna ningún valor, solo redirige a otra página.
  */
-function enviarDatosCafeteria() {
-    let formulario = document.getElementById("formulario");
-    let zona = document.getElementById("zona").value;
-    let ambiente = document.getElementById("ambiente").value;
-    let preferencia = document.getElementById("preferencia").value;
+const enviarDatosCafeteria = () => {
+    const formulario = document.getElementById("formulario");
+    const zona = document.getElementById("zona").value;
+    const ambiente = document.getElementById("ambiente").value;
+    const preferencia = document.getElementById("preferencia").value;
 
     // Verificar si alguna opción sigue sin seleccionarse
     if (zona === "OpcionZona" || ambiente === "OpcionAmbiente" || preferencia === "OpcionPreferencia") {
         alert("⚠️ Debes seleccionar una opción en todas las categorías antes de continuar.");
-
 
         // Restablecer el formulario después de la advertencia
         formulario.reset();
@@ -263,22 +262,26 @@ function enviarDatosCafeteria() {
 
     console.log("Redirigiendo a resultados.html...");
     window.location.href = "resultados.html";
-}
+};
 
 
 // Si estamos en `resultados.html`, mostramos las cafeterías filtradas
 /**
  * Filtra y muestra las cafeterías según las preferencias almacenadas en localStorage en la página `resultados.html`.
- * @method mostrarCafeteriasFiltradas
+ * @method mostrarCafeterias
  * @param {string} zonaSeleccionada - Zona seleccionada por el usuario, obtenida de localStorage.
  * @param {string} ambienteSeleccionado - Ambiente seleccionado por el usuario, obtenido de localStorage.
  * @param {string} preferenciaSeleccionada - Preferencia seleccionada por el usuario, obtenida de localStorage.
  * @return {void} No retorna ningún valor, solo actualiza el DOM con las cafeterías filtradas.
  */
-if (document.getElementById("cafeterias")) {
-    let zonaSeleccionada = localStorage.getItem("zona");
-    let ambienteSeleccionado = localStorage.getItem("ambiente");
-    let preferenciaSeleccionada = localStorage.getItem("preferencia");
+const mostrarCafeterias = () => {
+    const contenedor = document.getElementById("cafeterias");
+
+    if (!contenedor) return; // Si el contenedor no existe, salimos
+
+    const zonaSeleccionada = localStorage.getItem("zona");
+    const ambienteSeleccionado = localStorage.getItem("ambiente");
+    const preferenciaSeleccionada = localStorage.getItem("preferencia");
 
     // Filtrar cafeterías según la selección del usuario
     const cafeteriasFiltradas = cafeterias.filter(cafe =>
@@ -288,30 +291,28 @@ if (document.getElementById("cafeterias")) {
     );
 
     // Mostrar cafeterías en `resultados.html`
-    const contenedor = document.getElementById("cafeterias");
-
     if (cafeteriasFiltradas.length > 0) {
         cafeteriasFiltradas.forEach(cafe => {
-            let cafeElemento = document.createElement("div");
+            const cafeElemento = document.createElement("div");
             cafeElemento.classList.add("cafe-item");
 
             // Imagen del café
-            let logoImg = document.createElement("img");
+            const logoImg = document.createElement("img");
             logoImg.src = cafe.logo;
             logoImg.alt = `Logo de ${cafe.nombre}`;
             logoImg.classList.add("imagen-cafeteria");
 
             // Contenedor del texto
-            let textoDiv = document.createElement("div");
+            const textoDiv = document.createElement("div");
             textoDiv.classList.add("texto-cafeteria");
 
             // Nombre del café
-            let nombre = document.createElement("div");
+            const nombre = document.createElement("div");
             nombre.textContent = cafe.nombre;
             nombre.classList.add("nombre-cafeteria");
 
             // Link de Instagram
-            let instagramLink = document.createElement("a");
+            const instagramLink = document.createElement("a");
             instagramLink.href = cafe.instagram;
             instagramLink.textContent = "Instagram";
             instagramLink.target = "_blank";
@@ -331,7 +332,17 @@ if (document.getElementById("cafeterias")) {
     } else {
         contenedor.innerHTML = "<p>Asegúrate de completar el cuestionario.</p>";
     }
-}
+};
+
+// Ejecutar solo cuando se cargue la página
+window.onload = () => {
+    mostrarCafeterias();
+
+    // Si estamos en la página de la ruleta, inicializarla
+    if (window.location.pathname.includes("rouleta.html")) {
+        initRuleta(); // Este es el nombre correcto de la función
+    }
+};
 
 
 // Botón para volver a `index.html`
@@ -340,10 +351,10 @@ if (document.getElementById("cafeterias")) {
  * @method volverAlInicio
  * @return {void} No retorna ningún valor, solo redirige a otra página.
  */
-function volverAlInicio() {
+const volverAlInicio = () => {
     console.log("Redirigiendo a index.html...");
     window.location.href = "index.html";
-}
+};
 
 
 // Botón para empezar el cuestionario
@@ -352,10 +363,10 @@ function volverAlInicio() {
  * @method iniciarCuestionario
  * @return {void} No retorna ningún valor, solo redirige a otra página.
  */
-function iniciarCuestionario() {
+const iniciarCuestionario = () => {
     console.log("Redirigiendo a cuestionario.html...");
     window.location.href = "cuestionario.html";
-}
+};
 
 
 // Botón para volver a información
@@ -364,18 +375,22 @@ function iniciarCuestionario() {
  * @method volverDesdeInfo
  * @return {void} No retorna ningún valor, solo redirige a otra página.
  */
-function volverDesdeInfo() {
-    window.location.href = "index.html";
-}
+const volverDesdeInfo = () => window.location.href = "index.html";
 
 
 // Canvas
+/**
+ * Inicializa la ruleta de cafeterías, dibujándola en un canvas y manejando la lógica de giro y selección.
+ * Esta función se ejecuta al cargar la página `rouleta.html`, asegurándose de que los elementos necesarios existan.
+ * @method initRuleta
+ * @return {void} No retorna ningún valor, solo configura y maneja la ruleta en el DOM.
+ */
 const initRuleta = () => {
     const canvas = document.getElementById("ruletaCanvas");
-    if (!canvas) {
-        // Si no hay canvas en la página, no seguimos
-        return;
-    }
+    if (!canvas) return;
+
+    console.log("Ruleta inicializada");
+
     const ctx = canvas.getContext("2d");
     const btnGirar = document.getElementById("girarRuleta");
     const resultadoTexto = document.getElementById("resultadoCafeteria");
@@ -494,6 +509,4 @@ initRuleta();
  * @method irAleatorio
  * @return {void} No retorna ningún valor, solo redirige a otra página.
  */
-function irAleatorio() {
-    window.location.href = "rouleta.html";
-}
+const irAleatorio = () => window.location.href = "rouleta.html";
